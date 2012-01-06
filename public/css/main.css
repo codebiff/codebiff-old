@@ -138,6 +138,10 @@ a:hover {
 	margin-bottom: 60px;
 }
 
+.post.full p {
+	margin-bottom: 20px
+}
+
 
 
 /* SIDEBAR */

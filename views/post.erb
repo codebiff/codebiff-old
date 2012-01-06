@@ -1,0 +1,14 @@
+<article class="post full">
+    
+    <header>
+    <h1><a><%= @post.title %></a></h1>
+    <time datetime="<%= @post.date.strftime("%Y-%M-%d") %>">
+      <%= @post.date.strftime("%B %d, %Y") %>
+    </time>
+    </header>  
+
+    <section class="postContent">
+      <%= @post.to_html %>
+    </section>
+
+</article>
