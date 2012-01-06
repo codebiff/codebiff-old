@@ -2,6 +2,10 @@ include JADOF
 
 Post.dir = "posts"
 
+before do 
+  @tags = Post.all.map { |p| p.tags }.flatten.uniq  
+end
+
 get "/" do
   @posts = Post.all.reverse
   erb :index

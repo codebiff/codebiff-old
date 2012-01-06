@@ -1,5 +1,8 @@
 ---
 title: Welcome to my world!
+tags:
+  - stuff
+  - nonesence
 date: 2012-01-05
 ---
 

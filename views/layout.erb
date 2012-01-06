@@ -43,6 +43,15 @@
           <a href="#" class="social-link"><img src="images/twitter.png" alt="twitter"></a>  
         </section> <!-- /sidebar-box -->
 
+        <section class="sidebar-box">
+          <h3>tags</h3>
+          <ul>
+            <% for tag in @tags %>
+              <ul><a href="/tag/<%= tag %>"><%= tag %></a></ul>
+            <% end %>
+          </ul>
+        </section> <!-- /sidebar-box -->
+
       </section>
 
 
