@@ -7,7 +7,7 @@ get "/" do
   erb :index
 end
 
-get "/:post"
+get "/:post" do
   @post = Post.get(params[:post])
   erb :post
 end
