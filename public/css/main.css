@@ -83,13 +83,11 @@ a:hover {
 
 #mainColumn {
 	width: 700px;
-	height: 100%;
 	float: left;
 }
 
 #sidebar {
 	width: 200px;
-	height: 100%;
 	float: right;
 	display: inline;
 }
@@ -163,7 +161,6 @@ a:hover {
 
 /* FOOTER */
 footer {
-	position: relative;
 	height: 20px;
 	clear: both;
 }
