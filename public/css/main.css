@@ -76,6 +76,18 @@ a:hover {
 	text-decoration: underline;
 }
 
+h1, h2, h3, h4 { 
+	margin-bottom: 10px;
+	font-weight: bold; 
+}
+h1 { font-size: 28px }
+h2 { font-size: 22px }
+h3 { font-size: 20px }
+h4 { font-size: 18px }
+
+
+
+
 #container {
 	width: 960px;
 	margin: 30px auto;
@@ -109,18 +121,19 @@ a:hover {
 
 /* POST */
 
-.post > header {
+.post header {
 	margin-bottom: 15px;
 } 
 
 .post header h1 {
 	font-size: 26px;
+	margin-bottom: 0px;
 	font-family: 'Neucha', sans-serif;
 	font-style: italic;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.7); 
 }
 
-.post > header time {
+.post header time {
 	font-size: 12px;
 	font-style: italic;
 	line-height: 24px;
@@ -175,6 +188,6 @@ ul.tags li a{
 
 /* FOOTER */
 footer {
-	height: 20px;
+	padding-top: 30px;
 	clear: both;
 }

@@ -1,4 +1,4 @@
-<p>Posts with the tag '<%= params[:tag] %>':</p>
+<h2>Posts with the tag '<%= params[:tag] %>':</h2>
 
 <% unless @posts.empty? %>
 
@@ -31,5 +31,5 @@
   <% end %>
 
 <% else %>
-  <p>None found... return to the <a href="/">home page</a></p>
+  <p>No posts found... return to the <a href="/">home page</a></p>
 <% end %>
