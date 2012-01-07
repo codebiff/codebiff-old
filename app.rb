@@ -1,6 +1,6 @@
 include JADOF
 
-BLOG_TITLE       = "My Blog"
+BLOG_TITLE       = "CodeBiff"
 BLOG_DESCRIPTION = "My blog description"
 
 
