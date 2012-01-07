@@ -12,7 +12,7 @@ After two seasons of sitting on the bench, Shafer took 1911 off to go home and a
 
 Walker was born in Stepney, London the son of a brewery worker. He attended the Jubilee School in Bedford, Essex, leaving at 14 to work in an aircraft factory. He later worked as a salesman in Billingsgate Fish Market and did his National Service in the Royal Air Force. Walker was a keen amateur boxer becoming British amateur heavyweight champion in 1951. He turned professional and fought 14 professional fights winning 11 with eight knockouts. Walker then drifted into crime, working for East End gangster, Billy Hill, and eventually being convicted for theft and serving two and a half years in Wormwood Scrubs.
 
-![dummy-image](http://dummyimage.com/200x300/fff)
+![dummy-image] (http://dummyimage.com/200x300/fff)
 
 On release he became the owner of a motor garage and manager for his brother, Billy Walker a professional heavyweight boxer. Walker launched London's first discothèque, Dolly's in Jermyn Street, and a chain of cafes, Billy's Baked Potato, with his brother.
 

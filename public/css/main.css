@@ -168,10 +168,20 @@ ul.tags li {
 }
 
 .post .postContent img {
+	display: block;
 	border: 8px solid rgba(0,0,0,0.1);
 	border-radius: 6px;
+	margin: 0 auto;
+}
+
+.post .postContent img[alt~="left"] {
 	float: left;
-	margin: 0 20px 0 0;
+	margin-right: 20px;
+}
+
+.post .postContent img[alt~="right"] {
+	float: right;
+	margin-left: 20px;
 }
 
 
