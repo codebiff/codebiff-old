@@ -10,8 +10,11 @@ However, his time in major league baseball wasn't very happy for him. A young, s
 
 After `sudo apt-get install nodejs` two seasons of sitting on the bench, Shafer took 1911 off to go home and also to play baseball in Japan. He returned the following season, and in 1913, he was a regular in the Giants' starting line-up for the first time. He got to play in the 1912 and 1913 World Series.
 
-    def wanker name
-      puts "#{name} is a wanker"
+    require "sinatra"
+    
+    get "/" do
+      @posts = Post.all.reverse
+      erb :index
     end
 
 Walker was born in Stepney, London the son of a brewery worker. He attended the Jubilee School in Bedford, Essex, leaving at 14 to work in an aircraft factory. He later worked as a salesman in Billingsgate Fish Market and did his National Service in the Royal Air Force. Walker was a keen amateur boxer becoming British amateur heavyweight champion in 1951. He turned professional and fought 14 professional fights winning 11 with eight knockouts. Walker then drifted into crime, working for East End gangster, Billy Hill, and eventually being convicted for theft and serving two and a half years in Wormwood Scrubs.
