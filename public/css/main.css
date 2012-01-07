@@ -167,6 +167,13 @@ ul.tags li {
 	margin-bottom: 20px
 }
 
+.post .postContent img {
+	border: 8px solid rgba(0,0,0,0.1);
+	border-radius: 6px;
+	float: left;
+	margin: 0 20px 0 0;
+}
+
 
 
 /* SIDEBAR */
