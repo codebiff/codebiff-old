@@ -139,12 +139,16 @@ h4 { font-size: 18px }
 	line-height: 24px;
 	color: #888;
 	background: url('../images/clock-small.png') no-repeat 0 0px;
-	padding: 0 0 0 17px;
+	padding: 0 20px 0 17px;
+}
+
+ul.tags {
+	display: inline;
 }
 
 ul.tags li {
 	display: inline;
-	padding: 0 4px 0 15px;
+	padding: 0 2px 0 15px;
 	background: url('../images/tag-small.png') no-repeat 0 3px;
 }
 
