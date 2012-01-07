@@ -1,5 +1,5 @@
 ---
-title: spandex for everyone?
+title: Spandex for everyone?
 tags:
   - sequal
   - smashing

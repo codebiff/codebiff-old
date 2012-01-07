@@ -3,6 +3,7 @@ include JADOF
 Post.dir = "posts"
 
 before do 
+  @title = "Home"
   @tags = Post.all.map { |p| p.tags }.flatten.uniq
 end
 
@@ -12,12 +13,14 @@ get "/" do
 end
 
 get "/tags/:tag" do
+  @title = "Tagged as '#{params[:tag]}'"
   @posts = Post.all.select {|p| p.tags.to_a.include? (params[:tag].downcase) } 
   erb :tags
 end
 
 get "/:post" do
   @post = Post.get(params[:post])
+  @title = @post.title
   # TODO: Set page title
   erb :post
 end
