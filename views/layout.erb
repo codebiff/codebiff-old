@@ -45,9 +45,9 @@
 
         <section class="sidebar-box">
           <h3>tags</h3>
-          <ul>
+          <ul class="tags">
             <% for tag in @tags %>
-              <ul><a href="/tag/<%= tag %>"><%= tag %></a></ul>
+              <li><a href="/tag/<%= tag %>"><%= tag %></a></li>
             <% end %>
           </ul>
         </section> <!-- /sidebar-box -->

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:700italic);
+@import url(http://fonts.googleapis.com/css?family=Neucha);
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -114,9 +114,10 @@ a:hover {
 } 
 
 .post header h1 {
-	font-size: 24px;
-	font-family: 'PT Sans', sans-serif;
-	font-style: italic; 
+	font-size: 26px;
+	font-family: 'Neucha', sans-serif;
+	font-style: italic;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.7); 
 }
 
 .post > header time {
@@ -125,6 +126,13 @@ a:hover {
 	line-height: 24px;
 	color: #888;
 }
+
+ul.tags li {
+	display: inline;
+	padding: 0 4px 0 15px;
+	background: url('../images/tag-small.png') no-repeat 0 3px;
+}
+
 
 .post p.read-more {
 	text-align: right;
@@ -151,11 +159,17 @@ a:hover {
 #sidebar .sidebar-box h3 {
 	font-size: 16px;
 	font-weight: bold;
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 }
 
 #sidebar .sidebar-box .social-link {
 	padding-right: 3px;
+}
+
+ul.tags li a{
+	font-size: 12px;
+	color: #888;
+	font-weight: normal;
 }
 
 

@@ -7,6 +7,13 @@
     <time datetime="<%= post.date.strftime("%Y-%M-%d") %>">
       <%= post.date.strftime("%B %d, %Y") %>
     </time>
+    <p>
+      <ul class="tags">
+        <% for tag in post.tags %>
+          <li><a href="/tags/<%= tag %>"><%= tag %></a></li>
+        <% end %>
+      </ul>
+    </p>
     </header>  
 
     <section class="postContent">
