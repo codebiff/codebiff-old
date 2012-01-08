@@ -3,7 +3,6 @@
     <title><%= BLOG_TITLE %></title>  
     <description><%= BLOG_DESCRIPTION %></description>
     <link>http://www.codebiff.com</link>
-
     <% for post in @posts %>
       <item>
         <title><%= h post.title %></title>
@@ -12,6 +11,5 @@
         <description><%= h  post.to_html %></description>
       </item>
     <% end %>
-  
   </channel>
 </rss>
