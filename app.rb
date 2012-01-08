@@ -1,7 +1,7 @@
 include JADOF
 
 BLOG_TITLE       = "CodeBiff"
-BLOG_DESCRIPTION = "My blog description"
+BLOG_DESCRIPTION = "Broadcasting from the arse end of the web"
 DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0
 
 
