@@ -9,6 +9,12 @@ DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0
 
 Post.dir = "posts"
 
+
+helpers do 
+  include Rack::Utils
+  alias_method :h, :escape_html
+end
+
 before do 
   @title = "Home"
   @tags = Post.all.map { |p| p.tags }.flatten.uniq
@@ -22,7 +28,8 @@ end
 
 get "/feed.xml" do
   @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.take(10)
-  builder :feed
+  content_type 'application/rss+xml'
+  erb :feed, :layout => false
 end
 
 
