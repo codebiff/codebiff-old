@@ -3,7 +3,6 @@ title: About this site
 tags:
   - about
   - general
-  - niffnaff
 date: 2012-01-08
 ---
 Here's a quick first post about why I made the site and what it's all about. I'm guessing this will be read by no one as there isn't anything else useful on the site to be Googled!
