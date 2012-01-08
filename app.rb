@@ -2,7 +2,7 @@ include JADOF
 
 BLOG_TITLE       = "CodeBiff"
 BLOG_DESCRIPTION = "My blog description"
-DISQUS_DEV = ENV['DEVELOPMENT'] ? 1 : 0
+DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0
 
 
 
@@ -34,12 +34,12 @@ end
 
 get "/:post" do
   @post = Post.get(params[:post])
-  @title = @post.title
+  @title = @post.title 
   erb :post
 end
 
 
 
 post "/pull" do
-  system "git pull && bundle && touch tmp/restart.txt"
+  system "git pull && touch tmp/restart.txt"
 end
