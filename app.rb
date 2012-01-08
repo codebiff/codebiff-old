@@ -28,7 +28,7 @@ end
 
 get "/tags/:tag" do
   @title = "Tagged as '#{params[:tag]}'"
-  @posts = Post.all.select {|p| p.tags.to_a.include? (params[:tag].downcase) } 
+  @posts = Post.all.select{|p| p.tags.to_a.include? (params[:tag].downcase) }.sort{|a,b| a.date <=> b.date}.reverse
   erb :tags
 end
 
