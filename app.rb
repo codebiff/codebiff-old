@@ -34,10 +34,17 @@ end
 
 get "/:post" do
   @post = Post.get(params[:post])
-  @title = @post.title 
-  erb :post
+  unless @post.nil?
+    @title = @post.title 
+    erb :post
+  else 
+    not_found 
+  end
 end
 
+not_found do 
+  erb :'404'
+end
 
 
 post "/pull" do
