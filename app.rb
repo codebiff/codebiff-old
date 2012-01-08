@@ -10,6 +10,9 @@ DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0
 Post.dir = "posts"
 
 
+
+
+
 helpers do 
   include Rack::Utils
   alias_method :h, :escape_html
@@ -19,6 +22,15 @@ before do
   @title = "Home"
   @tags = Post.all.map { |p| p.tags }.flatten.uniq
 end
+
+not_found do 
+  erb :'404'
+end
+
+
+
+
+
 
 get "/" do
   @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse
@@ -49,11 +61,8 @@ get "/:post" do
   end
 end
 
-not_found do 
-  erb :'404'
-end
 
-
+# Pull latest commit from GitHub automatically
 post "/pull" do
   system "git pull && touch tmp/restart.txt"
 end
