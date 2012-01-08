@@ -230,6 +230,16 @@ ul.tags li a{
 	font-weight: normal;
 }
 
+/* DISQUS */
+#dsq-content h3 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#dsq-subscribe { display: none; }
+
+
+
 
 /* FOOTER */
 footer {
