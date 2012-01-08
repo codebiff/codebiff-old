@@ -15,13 +15,13 @@ before do
 end
 
 get "/" do
-  @posts = Post.all.reverse
+  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse
   erb :index
 end
 
 
 get "/feed.xml" do
-  @posts = Post.all.reverse.take(10)
+  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.take(10)
   builder :feed
 end
 
@@ -35,7 +35,6 @@ end
 get "/:post" do
   @post = Post.get(params[:post])
   @title = @post.title
-  # TODO: Set page title
   erb :post
 end
 
