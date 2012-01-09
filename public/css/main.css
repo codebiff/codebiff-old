@@ -167,8 +167,9 @@ ul.tags li {
 	margin-bottom: 60px;
 }
 
-.post.full .postContent p {
-	margin-bottom: 20px
+.post .postContent p {
+	margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 .post .postContent img {
