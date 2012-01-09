@@ -77,6 +77,9 @@ a:hover {
 	text-decoration: underline;
 }
 
+strong { font-weight: bold; }
+em     { font-style: italic; }
+
 h1, h2, h3, h4 { 
 	margin-bottom: 20px;
 	font-weight: bold; 
@@ -194,7 +197,8 @@ ul.tags li {
 .post .postContent p code,
 .post .postContent pre
  {
-	background: #555;
+	background: #707070;
+	background: rgba(112,112,112,0.95);
 	color: #fff;
 	padding: 2px 4px;
 	font-family: mono;
