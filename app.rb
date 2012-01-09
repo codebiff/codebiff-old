@@ -20,7 +20,7 @@ end
 
 before do 
   @title = "Home"
-  @tags = Post.all.map { |p| p.tags }.flatten.uniq
+  @tags = Post.all.map { |p| p.tags }.flatten.uniq.sort { |a,b| a <=> b }
 end
 
 not_found do 
