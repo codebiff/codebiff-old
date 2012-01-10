@@ -29,7 +29,7 @@ We use the **paginate** method directly on the array we want to paginate, along 
 
 When **paginate** is called it uses the _Enumerable_ method **[each slice](http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-each_slice)** to break the array into chunks, each containing _x_ amount of elements, defined by **per_page**. The returned _Enumerable_ is then converted to an array with **[to_a](http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-to_a)** before the required 'chunk' from this array is returned (**page**).
 
-**pages** is even easier. It divides the amount of elements in the array by the amount we want per 'chunk'. We need to convert **per_page** to a float (**[to_f](http://ruby-doc.org/core-1.9.3/Fixnum.html#method-i-to_f)**) so the result is returned as a decimal. This is rounded up with **[ceil](http://ruby-doc.org/core-1.9.3/Integer.html#method-i-ceil)** and that's it.
+**pages** is even easier. It divides the amount of elements in the array by the amount we want per 'chunk'. We need to convert **per_page** to a float (**[to_f](http://ruby-doc.org/core-1.9.3/Fixnum.html#method-i-to_f)**) so the result is returned as a decimal. This is rounded up with **[ceil](http://ruby-doc.org/core-1.9.3/Integer.html#method-i-ceil)** and that's it. We now know how many 'chunks' or pages the pagination will create. All good gen.
 
 ### The Example
 
