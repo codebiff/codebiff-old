@@ -20,7 +20,7 @@ PER_PAGE         = 5 # How many posts per paginated page
 
 # Config
 Post.dir = "posts"
-POST_PAGES = Post.all.pages
+POST_PAGES = Post.all.pages(PER_PAGE)
 
 # Helpers and hooks
 helpers do 
