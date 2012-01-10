@@ -1,18 +1,14 @@
 include JADOF
 
+# Constants
 BLOG_TITLE       = "CodeBiff"
 BLOG_DESCRIPTION = "Broadcasting from the arse end of the web"
 DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0
 
-
-
-
+# Config
 Post.dir = "posts"
 
-
-
-
-
+# Helpers and hooks
 helpers do 
   include Rack::Utils
   alias_method :h, :escape_html
@@ -27,23 +23,17 @@ not_found do
   erb :'404'
 end
 
-
-
-
-
-
+# Routes
 get "/" do
   @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse
   erb :index
 end
-
 
 get "/feed.xml" do
   @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.take(10)
   content_type 'application/rss+xml'
   erb :feed, :layout => false
 end
-
 
 get "/tags/:tag" do
   @title = "Tagged as '#{params[:tag]}'"
@@ -60,7 +50,6 @@ get "/:post" do
     not_found 
   end
 end
-
 
 # Pull latest commit from GitHub automatically
 post "/pull" do
