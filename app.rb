@@ -3,7 +3,7 @@ include JADOF
 class Array
   
   def paginate(page=1, per_page=10)
-    each_slice(per_page).to_a[page+1]
+    each_slice(per_page).to_a[page-1]
   end
 
   def pages(per_page=10)
@@ -37,8 +37,14 @@ end
 
 # Routes
 get "/" do
-  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse
+  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.to_a
   erb :index
+end
+
+get "/test" do
+  @pages = Post.all.to_a.pages
+  @posts = Post.all.to_a.paginate(1,10)
+  erb :test
 end
 
 get "/feed.xml" do
