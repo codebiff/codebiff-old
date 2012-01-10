@@ -25,3 +25,48 @@
   </article>
         
 <% end %>
+
+
+
+
+
+<% if POST_PAGES > 1 %>
+
+<% @page = get_page %>
+  
+<div class="pagination">
+
+  <ul>
+        
+    <% if @page.to_i == 1 %>
+      <li>&lsaquo;</li>
+    <% else %>
+      <li><a href="<%= "#{request.path}?page=#{@page.to_i - 1}" %>">&lsaquo;</a></li>
+    <% end %>
+    
+
+
+    <% POST_PAGES.times do |p| %>
+      
+      <% if @page.to_i == p+1 %>
+        <li class="current"><%= p+1 %></li>
+      <% else %>  
+        <li><a href="<%= "#{request.path}?page=#{p+1}" %>"><%= p+1 %></a></li>
+      <% end %>
+
+    <% end %>
+
+
+
+    <% if @page.to_i == POST_PAGES %>
+      <li>&rsaquo;</li>
+    <% else %>
+      <li><a href="<%= "#{request.path}?page=#{@page.to_i + 1}" %>">&rsaquo;</a></li>
+    <% end %>
+
+
+  </ul>
+
+</div>
+
+<% end %>

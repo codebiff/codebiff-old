@@ -1,17 +1,46 @@
 include JADOF
 
+class Array
+  
+  def paginate(page=1, per_page=10)
+    each_slice(per_page).to_a[page.to_i-1]
+  end
+
+  def pages(per_page=10)
+    (count / per_page.to_f).ceil
+  end
+
+end
+
 # Constants
 BLOG_TITLE       = "CodeBiff"
 BLOG_DESCRIPTION = "Broadcasting from the arse end of the web"
-DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0
+DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0 # Set disqus to development mode on localhost
+PER_PAGE         = 5 # How many posts per paginated page
 
 # Config
 Post.dir = "posts"
+POST_PAGES = Post.all.pages(PER_PAGE)
 
 # Helpers and hooks
 helpers do 
   include Rack::Utils
   alias_method :h, :escape_html
+
+  #TODO: Sort this fucking mess out!
+  def get_page
+    if params[:page]
+      if params[:page].to_i > POST_PAGES
+        page = 1
+      else
+        page = params[:page]
+      end
+    else
+     page = 1 
+    end
+    page
+  end
+
 end
 
 before do 
@@ -25,7 +54,7 @@ end
 
 # Routes
 get "/" do
-  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse
+  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.to_a.paginate(get_page,PER_PAGE)
   erb :index
 end
 
