@@ -35,7 +35,7 @@ When **paginate** is called it uses the _Enumerable_ method **[each slice](http:
 
 That's the boring _how it works_ crap out of the way. Now for the boring _let's see it in action_ crap. It's all pretty self explanatory.
 
-	array = (1..42).to_a
+	array = (1..42).to_a     #=> [1,2,3,4,5 ... 39,40,41,42]
 	
 	array.pages              #=> 5
 	array.pages(5)           #=> 9
