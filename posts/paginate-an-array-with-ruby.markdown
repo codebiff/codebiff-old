@@ -14,7 +14,7 @@ Here's a quick one to paginate an Array in Ruby. This little Array class _addon_
 	class Array
 	
 	  def paginate(page=1, per_page=10)
-	    each_slice(per_page).to_a[page+1]
+	    each_slice(per_page).to_a[page-1]
 	  end
 	
 	  def pages(per_page=10)
