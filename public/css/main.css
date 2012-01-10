@@ -219,6 +219,9 @@ ul.tags li {
 	margin: 33px 0 10px 0;
 }
 
+h3.tags-found { 
+	padding-bottom: 20px;
+}
 
 #fourohfour img {
 	display: block;
