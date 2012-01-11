@@ -28,8 +28,8 @@ helpers do
   alias_method :h, :escape_html
 
   def get_page
-    page = params[:page] || 1
-    page = 1 unless page < POST_PAGES
+    page = params[:page].to_i || 1
+    page = 1 if page > POST_PAGES   
   end
 
 end
