@@ -27,18 +27,8 @@ helpers do
   include Rack::Utils
   alias_method :h, :escape_html
 
-  #TODO: Sort this fucking mess out!
   def get_page
-    if params[:page]
-      if params[:page].to_i > POST_PAGES
-        page = 1
-      else
-        page = params[:page]
-      end
-    else
-     page = 1 
-    end
-    page
+    params[:page] || 1
   end
 
 end
