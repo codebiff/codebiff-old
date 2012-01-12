@@ -10,32 +10,6 @@ PER_PAGE         = 5 # How many posts per paginated page
 Post.dir = "posts"
 POST_PAGES = Post.all.pages(PER_PAGE)
 
-# Helpers and hooks
-helpers do 
-  include Rack::Utils
-  alias_method :h, :escape_html
-
-  def get_page
-    page = params[:page].to_i || 1
-    page = POST_PAGES if page > POST_PAGES     
-    page
-  end
-  
-  def tidy_date(date)
-    date.strftime("%B #{date.day.ordinalize}, %Y")
-  end
-
-end
-
-before do 
-  @title = "Home"
-  @tags = Post.all.map { |p| p.tags }.flatten.uniq.sort { |a,b| a <=> b }
-end
-
-not_found do 
-  erb :'404'
-end
-
 # Routes
 get "/" do
   @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.to_a.paginate(get_page,PER_PAGE)
@@ -67,4 +41,30 @@ end
 # Pull latest commit from GitHub automatically
 post "/pull" do
   system "git pull && touch tmp/restart.txt"
+end
+
+# Helpers and hooks
+helpers do 
+  include Rack::Utils
+  alias_method :h, :escape_html
+
+  def get_page
+    page = params[:page].to_i || 1
+    page = POST_PAGES if page > POST_PAGES     
+    page
+  end
+  
+  def tidy_date(date)
+    date.strftime("%B #{date.day.ordinalize}, %Y")
+  end
+
+end
+
+before do 
+  @title = "Home"
+  @tags = Post.all.map { |p| p.tags }.flatten.uniq.sort { |a,b| a <=> b }
+end
+
+not_found do 
+  erb :'404'
 end
