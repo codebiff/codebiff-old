@@ -17,7 +17,7 @@ helpers do
 
   def get_page
     page = params[:page].to_i || 1
-    page = 1 if page > POST_PAGES
+    page = POST_PAGES if page > POST_PAGES     
     page
   end
 
