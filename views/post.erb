@@ -4,7 +4,7 @@
     <h1><a><%= @post.title %></a></h1>
     <div class="post-meta">
     <time datetime="<%= @post.date.strftime("%Y-%M-%d") %>">
-      <%= @post.date.strftime("%B %d, %Y") %>
+      <%= tidy_date(@post.date) %>
     </time>
         <ul class="tags">
           <% for tag in @post.tags %>

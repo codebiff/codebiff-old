@@ -20,6 +20,10 @@ helpers do
     page = POST_PAGES if page > POST_PAGES     
     page
   end
+  
+  def tidy_date(date)
+    date.strftime("%B #{date.day.ordinalize}, %Y")
+  end
 
 end
 
