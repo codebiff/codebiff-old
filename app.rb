@@ -55,7 +55,7 @@ helpers do
   end
   
   def tidy_date(date)
-    date.strftime("%B #{date.day.ordinalize}, %Y")
+    date.strftime("#{date.day.ordinalize} of %B, %Y")
   end
 
 end
