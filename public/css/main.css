@@ -195,7 +195,12 @@ ul.tags li {
 	float: right;
 	margin-left: 20px;
 }
-
+.post .postContent p code,
+.post .postContent pre {
+	font-family: mono;
+	font-size: 12px;
+}
+/*
 .post .postContent p code,
 .post .postContent pre
  {
@@ -208,9 +213,9 @@ ul.tags li {
 	font-weight: bold;
 	border-radius: 3px;
 }
-
-.post .postContent pre {
-	padding: 10px 0 10px 20px;
+*/
+.post .postContent pre code {
+	padding: 10px;
 	margin: 0 0 20px 10px;
 	line-height: 1.3em;
 }

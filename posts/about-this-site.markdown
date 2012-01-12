@@ -5,7 +5,7 @@ tags:
   - general
 date: 2012-01-08
 ---
-Here's a quick first post about why I made the site and what it's all about. I'm guessing this will be read by no one as there isn't anything else useful on the site to be Googled!
+Here's a quick first post about why I made the site and what it's all about. I'm guessing this will be read by no one as there isn't anything else useful on the site to be Googled! It will be updated as the site evolves.
 
 ### What's it for?
 
@@ -19,7 +19,7 @@ Custom built with [Sinatra](http://sinatrarb.com) and [JADOF](https://github.com
 
 ### On the surface
 
-Background from [Subtle Patterns](http://subtlepatterns.com/?p=449). Social media icons by [Somicro](http://vervex.deviantart.com/art/Somicro-27-Social-Media-Icons-257232757). Small icons by [Yusuke Kamiyamane](http://p.yusukekamiyamane.com/). Lemon image from [Graphicpeel](http://graphicpeel.com/icons).
+Background from [Subtle Patterns](http://subtlepatterns.com/?p=449). Social media icons by [Somicro](http://vervex.deviantart.com/art/Somicro-27-Social-Media-Icons-257232757). Small icons by [Yusuke Kamiyamane](http://p.yusukekamiyamane.com/). Lemon image from [Graphicpeel](http://graphicpeel.com/icons). Code highlighting done with [highlight.js](http://softwaremaniacs.org/soft/highlight/en/).
 
 ### Software used
 
