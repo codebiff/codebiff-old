@@ -10,9 +10,17 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+    <script src="/js/linkify.js"></script>
     <script>
       hljs.initHighlightingOnLoad();
+      $(function(){
+        $.getJSON("http://twitter.com/statuses/user_timeline/codebiff.json?callback=?", function(data) {
+             text = data[0].text;
+             $("#twitter").html($.linkify(text));
+           });
+      });
     </script>
   </head>
 
@@ -59,6 +67,13 @@
             <% end %>
           </ul>
         </section> <!-- /sidebar-box -->
+
+        <section class="sidebar-box">
+          <h3>twitter</h3>
+          <p id="twitter">loading...</p>
+          <p class="follow-me-twitter">follow me - <a href="https://twitter.com/#!/codebiff">@codebiff</a></p>
+        </section> <!-- /sidebar-box -->
+
 
       </section>
 

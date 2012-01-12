@@ -265,7 +265,7 @@ h3.tags-found {
 /* SIDEBAR */
 
 #sidebar .sidebar-box {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 #sidebar .sidebar-box h3 {
@@ -276,6 +276,15 @@ h3.tags-found {
 
 #sidebar .sidebar-box .social-link {
 	padding-right: 3px;
+}
+
+.follow-me-twitter {
+	margin-top: 8px;
+	font-size: 10px;
+}
+
+.follow-me-twitter a {
+	font-weight: bold;
 }
 
 ul.tags li a{
