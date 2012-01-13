@@ -204,10 +204,8 @@ ul.tags li {
 	font-family: mono;
 	font-size: 12px;
 }
-/*
-.post .postContent p code,
-.post .postContent pre
- {
+
+.post .postContent p code {
 	background: #707070;
 	background: rgba(112,112,112,0.95);
 	color: #fff;
@@ -305,7 +303,11 @@ ul.tags li a{
 
 #dsq-subscribe { display: none; }
 
+.dsq-comment-body { font-size: 12px; }
 
+.dsq-comment-meta li, 
+.dsq-comment-actions
+{ line-height: 14px; }
 
 
 /* FOOTER */
