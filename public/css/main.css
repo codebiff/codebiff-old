@@ -190,6 +190,12 @@ ul.tags li {
 	margin: 0 auto;
 }
 
+.post .postContent img[alt~="clean"] {
+	display: inline;
+	border: none;
+	margin: 0 10px 0 0;
+}
+
 .post .postContent img[alt~="left"] {
 	float: left;
 	margin-right: 20px;
@@ -199,27 +205,30 @@ ul.tags li {
 	float: right;
 	margin-left: 20px;
 }
-.post .postContent p code,
-.post .postContent pre {
+
+.postContent p code,
+.postContent pre {
 	font-family: mono;
 	font-size: 12px;
 }
 
-.post .postContent p code {
-	background: #707070;
-	background: rgba(112,112,112,0.95);
+.postContent p code {
+	background: #3f3f3f;
 	color: #fff;
 	padding: 2px 4px;
 	font-family: mono;
 	font-size: 12px;
-	font-weight: bold;
-	border-radius: 3px;
 }
-*/
+
 .post .postContent pre code {
 	padding: 10px;
 	margin: 0 0 20px 10px;
 	line-height: 1.3em;
+}
+
+blockquote {
+	margin: 0 40px;
+	font-style: italic;
 }
 
 #mainColumn h3 {
