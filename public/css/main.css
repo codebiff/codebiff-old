@@ -303,7 +303,9 @@ ul.tags li a{
 
 #dsq-subscribe { display: none; }
 
-.dsq-comment-body { font-size: 12px; }
+.dsq-comment-body, 
+.dsq-like-activity
+{ font-size: 12px; }
 
 .dsq-comment-meta li, 
 .dsq-comment-actions
