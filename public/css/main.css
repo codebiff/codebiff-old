@@ -289,6 +289,9 @@ h3.tags-found {
 	padding-right: 3px;
 }
 
+#twitter {
+	font-style: italic;
+}
 .follow-me-twitter {
 	margin-top: 8px;
 	font-size: 10px;
