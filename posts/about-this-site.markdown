@@ -15,7 +15,7 @@ I expect posts will be few and far between (and a lot better) as this isn't my f
 
 ### Under the hood
 
-Custom built with [Sinatra](http://sinatrarb.com) and [JADOF](https://github.com/remi/jadof) running the show. Comments tacked on the end by [DISQUS](http://disqus.com) and the whole thing stuck on [github](https://github.com/fatnic/codebiff) for the whole world to see. I might write a post on how I made it one day. All hosted by the lovely [VPS.net](http://vps.net).
+Custom built with [Sinatra](http://sinatrarb.com) and [JADOF](https://github.com/remi/jadof) running the show. Comments tacked on the end by [DISQUS](http://disqus.com) and the whole thing stuck on [github](https://github.com/codebiff/codebiff) for the whole world to see. I might write a post on how I made it one day. All hosted by the lovely [VPS.net](http://vps.net).
 
 ### On the surface
 
