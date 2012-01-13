@@ -7,8 +7,8 @@ DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0 # Set disqus to development mode o
 PER_PAGE         = 5 # How many posts per paginated page
 
 # Config
-Post.dir = "posts"
-POST_PAGES = Post.all.pages(PER_PAGE)
+Post.dir         = "posts"
+POST_PAGES       = Post.all.pages(PER_PAGE)
 
 # Routes
 get "/" do
@@ -56,6 +56,16 @@ helpers do
   
   def tidy_date(date)
     date.strftime("#{date.day.ordinalize} of %B, %Y")
+  end
+
+  def pluralize(n, singular, plural=nil)
+    if n == 1 
+      "1 #{singular}"
+    elsif plural
+      "#{n} #{plural}"
+    else
+      "#{n} #{singular}s"
+    end
   end
 
 end

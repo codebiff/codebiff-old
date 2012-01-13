@@ -1,4 +1,4 @@
-<h3 class="tags-found">Found <%= @posts.count %> posts tagged as '<%= params[:tag] %>':</h3>
+<h3 class="tags-found">Found <%= pluralize(@posts.count, "post") %> tagged as '<%= params[:tag] %>':</h3>
 
 <% unless @posts.empty? %>
 
