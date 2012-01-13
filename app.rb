@@ -49,9 +49,11 @@ helpers do
   alias_method :h, :escape_html
 
   def get_page
-    page = params[:page].to_i || 1
-    page = POST_PAGES if page > POST_PAGES     
-    page
+    case page = params[:page].to_i
+      when 0; 1
+      when (1..POST_PAGES); page
+      else POST_PAGES
+    end
   end
   
   def tidy_date(date)
