@@ -10,7 +10,7 @@ Imagine if you will someone asks you to make a webpage/site which displays image
 
 To put it simply it involves taking and image, encoding that data into a string, and pasting it directly into our code for later decoding. Specifically with an encoder/decoder called Base64.
 
-As usual, [Wikipedia](http://en.wikipedia.org/wiki/Base64) puts it best.
+As usual, [Wikipedia](http://en.wikipedia.org/wiki/Base64) puts it best. (Or was the first thing that came up in Google)
 
 > Base64 encoding schemes are commonly used when there is a need to encode binary data that needs be stored and transferred over media that are designed to deal with textual data.
 
