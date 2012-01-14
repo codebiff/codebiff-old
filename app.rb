@@ -10,6 +10,7 @@ PER_PAGE         = 10 # How many posts per paginated page
 Post.dir         = "posts"
 POST_PAGES       = Post.all.pages(PER_PAGE)
 
+
 # Routes
 get "/" do
   @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.to_a.paginate(get_page,PER_PAGE)
