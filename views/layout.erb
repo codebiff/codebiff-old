@@ -12,15 +12,8 @@
     <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
-    <script src="/js/linkify.js"></script>
+    <script src="/js/main.js"></script>
     <script>
-      hljs.initHighlightingOnLoad();
-      $(function(){
-        $.getJSON("http://twitter.com/statuses/user_timeline/codebiff.json?callback=?", function(data) {
-             text = data[0].text;
-             $("#twitter").html($.linkify(text));
-           });
-      });
     </script>
   </head>
 
