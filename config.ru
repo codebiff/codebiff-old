@@ -1,7 +1,3 @@
-Dir.glob(File.join("vendor", "gems", "*", "lib")).each do |lib|
-    $LOAD_PATH.unshift(File.expand_path(lib))
-end
-
 require "sinatra"
 require "jadof"
 require "yaml"
