@@ -39,7 +39,7 @@ get "/:post" do
 end
 
 # Pull latest commit from GitHub automatically
-post "/pull/:token" do
+post "/pull" do
   system "git pull && touch tmp/restart.txt"
 end
 
