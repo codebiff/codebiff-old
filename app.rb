@@ -4,7 +4,7 @@ include JADOF
 BLOG_TITLE       = "CodeBiff"
 BLOG_DESCRIPTION = "Broadcasting from the arse end of the web"
 DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0 # Set disqus to development mode on localhost
-PER_PAGE         = 5 # How many posts per paginated page
+PER_PAGE         = 10 # How many posts per paginated page
 
 # Config
 Post.dir         = "posts"
