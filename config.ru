@@ -1,6 +1,7 @@
 require "sinatra"
 require "jadof"
 require "yaml"
+require "json"
 require "./lib/array"
 require "./lib/fixnum"
 require "rack/google-analytics"
