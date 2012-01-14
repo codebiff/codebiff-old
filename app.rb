@@ -41,8 +41,6 @@ end
 
 # Pull latest commit from GitHub automatically
 post "/pull" do
-  push = JSON.parse(params[:payload])
-  File.open("commits/#{Time.now.strftime("%Y-%m-%d-%H:%M:%S")}", "w") {|f| f << push}
   system "git pull && touch tmp/restart.txt"
 end
 
