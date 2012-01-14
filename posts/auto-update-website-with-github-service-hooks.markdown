@@ -16,7 +16,7 @@ Let's look at the GitHub side of things first. Within your repository's admin se
 
 Now we need to create the POST route in our app. In my example I'm using a Sinatra app but it can easily be ported to any framework/language.
 
-	POST "/pull" do
+	post "/pull" do
 	  system "git pull && touch tmp/restart.txt"
 	end
 
