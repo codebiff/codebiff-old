@@ -40,7 +40,7 @@ end
 
 # Pull latest commit from GitHub automatically
 post "/pull/:token" do
-  system "git pull && touch tmp/restart.txt" unless params[:token] !== ENV['GIT_PULL']
+  system "git pull && touch tmp/restart.txt" unless !(params[:token] == ENV['GIT_PULL'])
 end
 
 # Helpers and hooks
