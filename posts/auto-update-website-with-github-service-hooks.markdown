@@ -6,7 +6,7 @@ tags:
 date: 2012-01-14
 ---
 
-Something cool I just discovered is that you can set a cloned repo to automatically pull once a commit has been pushed to GitHub. It's really easy to setup and once it's sorted you can deploy from development machine to server with one `git push`
+Something cool I just discovered is that you can set a cloned repo to automatically pull once a commit has been pushed to GitHub. It's really easy to setup and once it's sorted you can deploy from development machine to server with one _git push_
 
 ### Setting Up
 
