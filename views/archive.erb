@@ -1,0 +1,10 @@
+<h3>Archive</h3>
+
+<% for post in @posts %>
+  <p class="archive-entry">
+    <time datetime="<%= post.date.strftime("%Y-%m-%dT%H:%M:%S%z") %>">
+      <%= tidy_date(post.date) %>
+    </time>
+    <a href="/<%= post.name %>"><%= post.title %></a>
+  </p>
+<% end %>

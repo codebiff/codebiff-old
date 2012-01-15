@@ -17,6 +17,11 @@ get "/" do
   erb :index
 end
 
+get "/archive" do
+  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.to_a
+  erb :archive
+end
+
 get "/feed.xml" do
   @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.take(10)
   content_type 'application/rss+xml'
