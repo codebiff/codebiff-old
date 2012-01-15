@@ -71,6 +71,10 @@ helpers do
     end
   end
 
+  def partial(template, locals = {})
+    erb(template, :layout => false, :locals => locals)
+  end
+
 end
 
 before do 
