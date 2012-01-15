@@ -20,7 +20,7 @@ Now we need to create the POST route in our app. In my example I'm using a Sinat
 	  system "git pull && touch tmp/restart.txt"
 	end
 
-Once the app receives the POST from GitHub it will run `git pull` on the server and grab the latest commit. In the example it also restarts passenger so any updates to the app will be loaded.
+Once the app receives the POST from GitHub it will run `$ git pull` on the server and grab the latest commit. In the example it also restarts passenger so any updates to the app will be loaded.
 
 ### Deploying
 
@@ -28,6 +28,6 @@ To get it onto your server is as simple as **SSH**ing into it and cloning the re
 
 	$ git clone git://github.com/username/example.git example
 
-Assuming your server is setup to serve this directory correctly you now have a fully functional, auto updating website. Now whenever you are ready to update the site just make your changes on the development machine. Commit your changes and `git push`. Done. 
+Assuming your server is setup to serve this directory correctly you now have a fully functional, auto updating website. Now whenever you are ready to update the site just make your changes on the development machine. Commit your changes and `$ git push`. Done. 
 
 
