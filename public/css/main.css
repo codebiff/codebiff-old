@@ -206,7 +206,7 @@ ul.tags li {
 
 .postContent p code,
 .postContent pre {
-	font-family: monospace;
+	font-family: mono, monospace;
 	font-size: 12px;
 }
 
@@ -214,7 +214,7 @@ ul.tags li {
 	background: #3f3f3f;
 	color: #fff;
 	padding: 2px 4px;
-	font-family: monospace;
+	font-family: mono, monospace;
 	font-size: 12px;
 }
 
