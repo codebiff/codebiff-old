@@ -74,6 +74,10 @@ helpers do
     date.strftime("#{date.day.ordinalize} of %B, %Y")
   end
 
+  def geek_date(date)
+    date.strftime("%Y-%m-%dT%H:%M:%S%z") 
+  end
+
   def pluralize(n, singular, plural=nil)
     if n == 1 
       "1 #{singular}"
