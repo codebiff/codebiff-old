@@ -1,6 +1,6 @@
 class String
   
-  def filenameize
+  def slug
     downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   end
 
