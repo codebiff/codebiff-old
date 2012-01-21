@@ -6,7 +6,7 @@ tags:
 date: 2012-01-13
 ---
 
-Imagine if you will someone asks you to make a webpage/site which displays images without referencing external assets. Why someone asks you to do this I don't know, and personally I'd tell them to poke off but that's just me. However, if you're a ncie guy that can't say no, here's one method.
+Imagine if you will someone asks you to make a webpage/site which displays images without referencing external assets. Why someone asks you to do this I don't know, and personally I'd tell them to poke off but that's just me. However, if you're a nice guy that can't say no, here's one method.
 
 To put it simply it involves taking an image, encoding that data into a string, and pasting it directly into our code for later decoding. Specifically with an encoder/decoder called Base64.
 
