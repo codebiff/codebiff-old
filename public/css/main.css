@@ -300,6 +300,10 @@ p.archive-entry time {
 	padding-right: 3px;
 }
 
+#sidebar .sidebar-nav a {
+	line-height: 22px;
+}
+
 #twitter {
 	font-style: italic;
 }
