@@ -3,7 +3,7 @@
   <header>
   <h1><a href="/<%= post.name %>"><%= post.title %></a></h1>
   <div class="post-meta">
-  <time datetime="<%= geek_date(post.date) %>" pubdate>
+  <time class="published" datetime="<%= geek_date(post.date) %>" pubdate>
     <%= tidy_date(post.date) %>
   </time>
     <ul class="tags">

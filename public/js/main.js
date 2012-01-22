@@ -4,10 +4,16 @@
 // Initialize syntax highlighting
 hljs.initHighlightingOnLoad();
 
-// Get latest tweet
+
 $(function(){
+
+  // Get latest tweet
   $.getJSON("http://twitter.com/statuses/user_timeline/codebiff.json?callback=?", function(data) {
     text = data[0].text;
     $("#twitter").html($.linkify(text));
   });
+
+  // Fuzzy Time
+  $("time.published").timeago();
+
 });
