@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster|Ubuntu:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -57,7 +57,7 @@ html { height: 100% }
 body {
 	background: url("../images/bg.png") repeat;
 	color: #444;
-	font-family: Ubuntu, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-family: Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	height: 100%;
 }
 
@@ -150,7 +150,7 @@ h4 { font-size: 18px }
 	font-style: italic;
 	line-height: 24px;
 	color: #888;
-	background: url('../images/clock-small.png') no-repeat 0 -2px;
+	background: url('../images/clock-small.png') no-repeat 0 0;
 	padding: 0 20px 0 17px;
 }
 
@@ -161,7 +161,7 @@ ul.tags {
 ul.tags li {
 	display: inline;
 	padding: 0 2px 0 15px;
-	background: url('../images/tag-small.png') no-repeat 0 5px;
+	background: url('../images/tag-small.png') no-repeat 0 4px;
 }
 
 
