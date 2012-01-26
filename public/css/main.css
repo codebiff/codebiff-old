@@ -1,11 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Salsa);
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -140,10 +140,9 @@ h4 { font-size: 18px }
 .post header h1 {
 	font-size: 28px;
 	margin-bottom: 0px;
-	font-family: 'Lobster', sans-serif;
+	font-family: 'Salsa', sans-serif;
 	text-shadow: 0px 3px 0px rgba(255,255,255,0.9); 
 	font-weight: normal;
-	font-style: italic;
 }
 
 .post header time {
