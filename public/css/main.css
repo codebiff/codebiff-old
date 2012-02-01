@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Salsa);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -56,15 +56,16 @@ html { height: 100% }
 
 body {
 	background: url("../images/bg.png") repeat;
-	color: #444;
-	font-family: Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	color: #ccc;
+	color: rgba(255,255,255,0.6);
+	font-family: Verdana, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; 
 	height: 100%;
+	font-size: 11px;
+	line-height: 1.5em;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.6);
 }
 
 p {
-	font-size: 14px;
-	line-height: 1.5em;
-	text-shadow: 0px 1px 0px rgba(255,255,255,0.9);
 }
 
 a {
@@ -74,6 +75,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 strong { font-weight: bold; }
@@ -113,11 +115,11 @@ h4 { font-size: 18px }
 /* MAIN HEADER */
 
 #mainColumn > header {
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 #mainColumn > header h1 {
-	font-size: 40px
+	font-size: 30px;
 }
 
 #mainColumn header img {
@@ -134,24 +136,26 @@ h4 { font-size: 18px }
 }
 
 .post header {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 } 
 
 .post header h1 {
-	font-size: 28px;
-	margin-bottom: 0px;
-	font-family: 'Salsa', sans-serif;
-	text-shadow: 0px 3px 0px rgba(255,255,255,0.9); 
+	font-size: 26px;
+	margin-bottom: 7px;
 	font-weight: normal;
+	font-family: "Open Sans Condensed", Arial, sans-serif;
+}
+
+.post .post-meta {
+	font-size: 10px;
+	color: rgba(255,255,255,0.5);
 }
 
 .post header time {
-	font-size: 13px;
 	font-style: italic;
 	line-height: 24px;
-	color: #888;
 	background: url('../images/clock-small.png') no-repeat 0 0;
-	padding: 0 20px 0 17px;
+	padding: 2px 20px 0 17px;
 }
 
 ul.tags {
@@ -160,7 +164,7 @@ ul.tags {
 
 ul.tags li {
 	display: inline;
-	padding: 0 2px 0 15px;
+	padding: 4px 2px 0 15px;
 	background: url('../images/tag-small.png') no-repeat 0 4px;
 }
 
@@ -172,12 +176,11 @@ ul.tags li {
 }
 
 .post {
-	margin-bottom: 40px;
+	margin-bottom: 70px;
 }
 
 .post .postContent p {
 	margin-bottom: 20px;
-  padding: 0 0 0 10px;
 }
 
 .post .postContent img {
@@ -219,8 +222,18 @@ ul.tags li {
 
 .post .postContent pre code {
 	padding: 10px;
-	margin: 0 0 20px 10px;
+	margin: 0 0 20px 0px;
 	line-height: 1.3em;
+}
+
+.post hr {
+	display: block;
+	width: 284px;
+	height: 27px;
+	border: 0px;
+	background: url("../images/seperator.png") no-repeat;
+	position: relative;
+	top: 13px;
 }
 
 blockquote {
@@ -301,26 +314,34 @@ p.archive-entry time {
 }
 
 #sidebar .sidebar-nav a {
-	line-height: 22px;
+	line-height: 1em;
 }
 
 #twitter {
 	font-style: italic;
-}
-.follow-me-twitter {
-	margin-top: 8px;
 	font-size: 10px;
 }
 
+.follow-me-twitter {
+	margin-top: 8px;
+	font-size: 9px;
+}
+
 .follow-me-twitter a {
-	font-weight: bold;
+	font-weight: normal;
 }
 
 ul.tags li a{
-	font-size: 13px;
+	font-size: 10px;
 	color: #888;
+	color: rgba(255,255,255,0.5);
 	font-weight: normal;
 }
+ul.tags li a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
 
 /* DISQUS */
 #dsq-content h3 {
