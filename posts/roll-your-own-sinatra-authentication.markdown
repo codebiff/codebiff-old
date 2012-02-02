@@ -38,7 +38,7 @@ Let's start at the beginning. We need to register a user. So let's make a form.
     
     </form>
 
-We're going to need a database model for our users, do lets define one now.
+We're going to need a database model for our users, so lets define one now.
 
     require "bcrypt"
     require "securerandom"
@@ -64,7 +64,7 @@ We'll be using our email as the username, so that's saved here. We don't want to
 
 There are also come accessors and validations to ensure that when the registration form is submitted we can ensure the input is good.
 
-And finally. Some routes.
+And finally some routes.
 
     get "/signup" do
       erb :signup
@@ -166,4 +166,4 @@ The `current_user` method either grabs the user details from the database if it'
   
     end
 
-TADA! Well, that's the basics. There's also lot's more that can be included (remember me, email confirmation etc.) but I'll leave that to you. I'm always updating and building on [my authentication framework on github](https://github.com/codebiff/sinatra-authentication) so check it out there for some ideas.
+TADA! Well, that's the basics. There's also lots more that can be included (remember me, email confirmation etc.) but I'll leave that to you. I'm always updating and building on [my authentication framework on github](https://github.com/codebiff/sinatra-authentication) so check it out there for some ideas.
