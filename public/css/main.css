@@ -87,7 +87,9 @@ h1, h2, h3, h4 {
 }
 h1 { font-size: 28px }
 h2 { font-size: 22px }
-h3 { font-size: 20px }
+h3 {
+	font-family: "Open Sans Condensed";
+ }
 h4 { font-size: 18px }
 
 
@@ -304,9 +306,10 @@ p.archive-entry time {
 }
 
 #sidebar .sidebar-box h3 {
-	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 7px;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: italic;
+	margin-bottom: 10px;
 }
 
 #sidebar .sidebar-box .social-link {
