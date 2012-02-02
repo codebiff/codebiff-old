@@ -200,6 +200,8 @@ padding:2px 4px;
 line-height:1.3em;
 margin:0 0 20px;
 padding:10px;
+overflow-x: auto;
+overflow-y: hidden;
 }
 
 .post hr {
