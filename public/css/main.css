@@ -86,7 +86,7 @@ font-size:18px;
 
 #container {
 width:960px;
-margin: 0px auto 30px auto;
+margin: -20px auto 30px auto;
 }
 
 #mainColumn {
@@ -100,6 +100,10 @@ float:right;
 display:inline;
 }
 
+#mainColumn {
+margin-top: 10px;
+}
+
 #mainColumn > header h1 {
 font-size:30px;
 }
@@ -111,6 +115,8 @@ margin:0 auto;
 
 .twitter-share-button {
 float:right;
+position: relative;
+top: 5px;
 }
 
 .post header {
