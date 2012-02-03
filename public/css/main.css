@@ -196,6 +196,8 @@ color:#fff;
 font-family:mono, monospace;
 font-size:12px;
 padding:2px 4px;
+background: rgba(0,0,0,0.1);
+border-radius: 4px;
 }
 
 .post .postContent pre code {
@@ -204,6 +206,8 @@ margin:0 0 20px;
 padding:10px;
 overflow-x: auto;
 overflow-y: hidden;
+background: rgba(0,0,0,0.1);
+border-radius: 10px;
 }
 
 .post hr {
