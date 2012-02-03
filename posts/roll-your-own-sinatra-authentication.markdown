@@ -40,6 +40,7 @@ Let's start at the beginning. We need to register a user. So let's make a form.
 
 We're going to need a database model for our users, so lets define one now.
 
+    ~~ruby
     require "bcrypt"
     require "securerandom"
 

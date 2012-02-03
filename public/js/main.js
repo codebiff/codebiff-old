@@ -16,4 +16,15 @@ $(function(){
   // Fuzzy Time
   $("time.published").timeago();
 
+  // Fix highlighting
+  $("pre > code").each(function(){
+    var lang = $(this).text().match(/~~(\w+)/);
+    if (lang) {
+      var content = $(this).html().replace(/~~(\w+)/, "").substr(1);
+      var new_pre = "<pre><code class=\"" + lang[1] + "\">" + content + "</code></pre>";
+      $(this).parent().after(new_pre);
+      $(this).parent().remove();
+    }
+   });
+
 });

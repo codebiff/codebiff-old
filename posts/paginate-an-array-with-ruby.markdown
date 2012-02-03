@@ -11,17 +11,18 @@ Here's a quick one to paginate an Array in Ruby. This little Array class _addon_
 
 ### The Code
 
-	class Array
-	
-	  def paginate(page=1, per_page=10)
-	    each_slice(per_page).to_a[page-1]
-	  end
-	
-	  def pages(per_page=10)
-	    (count / per_page.to_f).ceil
-	  end
-	
-	end
+    ~~ruby
+    class Array
+    	
+      def paginate(page=1, per_page=10)
+        each_slice(per_page).to_a[page-1]
+      end
+        
+      def pages(per_page=10)
+        (count / per_page.to_f).ceil
+      end
+      	
+    end
 
 ### The Explanation
 
@@ -35,13 +36,14 @@ When **paginate** is called it uses the _Enumerable_ method **[each slice](http:
 
 That's the boring _how it works_ crap out of the way. Now for the boring _let's see it in action_ crap. It's all pretty self explanatory.
 
-	array = (1..42).to_a     #=> [1,2,3,4,5 ... 39,40,41,42]
-	
-	array.pages              #=> 5
-	array.pages(5)           #=> 9
-	array.pages(50)          #=> 1
-
-	array.paginate           #=> [1,2,3,4,5,6,7,8,9,10]
-	array.paginate(3)        #=> [21,22,23,24,25,26,27,28,29,30]
-	array.paginate(3,5)      #=> [11,12,13,14,15]
+    ~~ruby
+  	array = (1..42).to_a     #=> [1,2,3,4,5 ... 39,40,41,42]
+  	
+  	array.pages              #=> 5
+  	array.pages(5)           #=> 9
+  	array.pages(50)          #=> 1
+  
+  	array.paginate           #=> [1,2,3,4,5,6,7,8,9,10]
+  	array.paginate(3)        #=> [21,22,23,24,25,26,27,28,29,30]
+  	array.paginate(3,5)      #=> [11,12,13,14,15]
 	
