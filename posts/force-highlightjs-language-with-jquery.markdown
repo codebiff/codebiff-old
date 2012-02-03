@@ -9,7 +9,7 @@ tags:
 date: 2012-02-03 20:00:00
 ---
 
-[highlight.js](http://softwaremaniacs.org/soft/highlight/en/) is a handy syntax highlighter when writing in Markdown as it allows you to highlight pre tags without the need to have a class attribute (very difficult in Markdown). It's _usually_ clever enough to understand what language the code is written in and assign a class accordingly. But it's not fullproof and sometimes (only sometimes) get's it wrong.
+[highlight.js](http://softwaremaniacs.org/soft/highlight/en/) is a handy syntax highlighter when writing in Markdown as it allows you to highlight pre tags without the need to have a class attribute (very difficult in Markdown). It's _usually_ clever enough to understand what language the code is written in and assign a class accordingly. But it's not fullproof and sometimes (only sometimes) gets it wrong.
 
 So here's a small snippet of jQuery to fix that. It looks for `<pre><code>` tags. If it includes a specific identifier `~~lang` it will set the class to that language. So if it's ruby code add `~~ruby` etc. 
 
