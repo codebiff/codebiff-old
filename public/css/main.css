@@ -86,7 +86,7 @@ font-size:18px;
 
 #container {
 width:960px;
-margin:30px auto;
+margin: 0px auto 30px auto;
 }
 
 #mainColumn {
@@ -260,6 +260,20 @@ padding-right:10px;
 font-size:12px;
 font-style:italic;
 color:#888;
+}
+
+#sidebar .sidebar-box a.title {
+display: block;
+font-size: 70px;
+font-weight: 300;
+font-family: "Open Sans Condensed", sans-serif;
+padding-top: 30px;
+line-height: 1.2em; 
+}
+
+#sidebar .sidebar-box a.title:hover {
+text-decoration: none;
+color: #fff;
 }
 
 #sidebar .sidebar-box h3 {
