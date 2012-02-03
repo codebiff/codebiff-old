@@ -22,7 +22,6 @@ As you can see it's a little bit more complicated than that. I was having troubl
         var content = $(this).html().replace(/~~(\w+)/, "").substr(1);
         var new_pre = "<pre><code class=\"" + lang[1] + "\">" + content + "</code></pre>";
         $(this).parent().after(new_pre);
-        $(this).parent().remove();
       }
     });
 
