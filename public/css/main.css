@@ -258,6 +258,10 @@ font-style:italic;
 color:#888;
 }
 
+#sidebar .sidebar-box {
+position: relative;	
+}
+
 #sidebar .sidebar-box a.title {
 display: block;
 font-size: 70px;
@@ -283,22 +287,29 @@ margin-bottom:10px;
 padding-right:3px;
 }
 
+#sidebar .sidebar-search form {
+position: relative;
+}
+
 #sidebar .sidebar-search input, 
 #sidebar .sidebar-search button
 {
 background: #333;
 background: rgba(0,0,0,0.2);
 border: none;
-color: #eee;
+color: #111;
 color: rgba(255,255,255,0.6);
-padding: 2px 5px 4px;
+padding: 0;
 margin: 0;
+height: 24px;
+display: block;
 }
 
 #sidebar .sidebar-search input {
+width: 164px;
 border-top-left-radius: 4px;
 border-bottom-left-radius: 4px;
-margin-right: -4px;
+padding-left: 6px;
 }
 
 input:focus {
@@ -306,10 +317,17 @@ outline: none;
 }
 
 #sidebar .sidebar-search button {
-border-left: 1px solid #666;
+/*border-left: 1px solid #666;*/
 border-top-right-radius: 4px;
 border-bottom-right-radius: 4px;
-margin-right: 0px;
+width: 30px;
+position: absolute;
+right: 0;
+top: 0;
+text-indent: -99999px;
+background-image: url("../images/arrow-curve-gray.png");
+background-repeat: no-repeat;
+background-position: 5px 5px;
 }
 
 #sidebar .sidebar-nav a {
