@@ -41,9 +41,7 @@ Need a quick countdown timer in Javascript? Here you go.
 	  
 	}, 1000);
 
-### Example
-
-Countdown till midnight
+### Example - Countdown to Midnight
 
 <p id="countdown-timer" style="display:block; width:400px;margin: 0 auto; background: #111; background: rgba(0,0,0,0.1);text-align:center;font-size:18px;padding:5px;border-radius:6px">
 	<span id="timer-days">0</span> days
