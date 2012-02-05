@@ -33,6 +33,10 @@ get "/tags/:tag" do
   erb :tags
 end
 
+get "/contact" do
+  erb :contact
+end
+
 get "/:post" do
   @post = Post.get(params[:post])
   unless @post.nil?

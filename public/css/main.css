@@ -64,7 +64,6 @@ font-style:italic;
 }
 
 h1,h2,h3,h4 {
-margin-bottom:20px;
 font-weight:700;
 }
 
@@ -86,12 +85,13 @@ font-size:18px;
 
 #container {
 width:960px;
-margin: -20px auto 30px auto;
+margin: 0px auto;
 }
 
 #mainColumn {
 width:700px;
 float:left;
+padding-top: 45px;
 }
 
 #sidebar {
@@ -100,23 +100,14 @@ float:right;
 display:inline;
 }
 
-#mainColumn {
-margin-top: 10px;
-}
-
-#mainColumn > header h1 {
-font-size:30px;
-}
-
-#mainColumn header img {
-display:block;
-margin:0 auto;
-}
-
 .twitter-share-button {
 float:right;
 position: relative;
 top: 5px;
+}
+
+.post {
+
 }
 
 .post header {
@@ -125,9 +116,10 @@ margin-bottom:10px;
 
 .post header h1 {
 font-size:26px;
-margin-bottom:7px;
+margin: 0 0 7px 0;
 font-weight:400;
 font-family:"Open Sans Condensed", Arial, sans-serif;
+line-height: 1em;
 }
 
 .post .post-meta {
@@ -210,15 +202,6 @@ background: rgba(0,0,0,0.1);
 border-radius: 10px;
 }
 
-.post hr {
-display:block;
-width:284px;
-height:27px;
-border:0;
-background:url("../images/seperator.png") no-repeat;
-position:relative;
-top:13px;
-}
 
 blockquote {
 font-style:italic;
@@ -228,7 +211,11 @@ margin:0 40px;
 #mainColumn h3 {
 font-size:18px;
 font-style:italic;
-margin:33px 0 10px;
+padding: 0 0 20px 0
+}
+
+#mainColumn .post h3 {
+padding: 20px 0 15px 0;
 }
 
 h3.tags-found {
@@ -246,11 +233,6 @@ float: left;
 
 .pagination .pagination-older {
 float: right;
-}
-
-#fourohfour img {
-display:block;
-margin:30px auto;
 }
 
 #fourohfour p {
@@ -272,12 +254,19 @@ font-style:italic;
 color:#888;
 }
 
-#sidebar .sidebar-box a.title img {
-width: 166px;
-height: 63px;
-margin: 50px auto 0px;
+#sidebar .sidebar-box a.title {
+display: block;
+font-size: 70px;
+font-weight: 300;
+font-family: "Open Sans Condensed", sans-serif;
+padding-top: 30px;
+line-height: 1.2em; 
 }
 
+#sidebar .sidebar-box a.title:hover {
+text-decoration: none;
+color: #fff;
+}
 
 #sidebar .sidebar-box h3 {
 font-size:18px;
