@@ -75,7 +75,6 @@ helpers do
     end
   end
   
-  # format time (1st January, 2012)
   def tidy_date(date)
     date.strftime("#{date.day.ordinalize} of %B, %Y")
   end
@@ -99,6 +98,11 @@ helpers do
   # Loads partial view into template. Required vriables into locals
   def partial(template, locals = {})
     erb(template, :layout => false, :locals => locals)
+  end
+
+  # Check if js file exists with name
+  def js_exists? name
+    FileTest.exist? "public/js/#{name}.js"
   end
 
 end
