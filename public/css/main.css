@@ -347,6 +347,13 @@ background-position: 5px 5px;
 line-height:1em;
 }
 
+.sidebar-hosting a {
+display: block;
+width: 104px;
+height: 42px;
+margin: 0 auto;
+}
+
 #twitter {
 font-style:italic;
 font-size:10px;
