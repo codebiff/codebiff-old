@@ -1,0 +1,13 @@
+<h3 class="tags-found">Search result for '<%= params[:q] %>':</h3>
+
+<% unless @posts.empty? %>
+
+  <% for post in @posts %>
+    <%= partial :stub, :post => post %>        
+  <% end %>
+
+<% else %>
+
+  <p>No posts found... return to the <a href="/">home page</a></p>
+
+<% end %>
