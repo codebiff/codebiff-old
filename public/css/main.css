@@ -272,19 +272,12 @@ font-style:italic;
 color:#888;
 }
 
-#sidebar .sidebar-box a.title {
-display: block;
-font-size: 70px;
-font-weight: 300;
-font-family: "Open Sans Condensed", sans-serif;
-padding-top: 30px;
-line-height: 1.2em; 
+#sidebar .sidebar-box a.title img {
+width: 166px;
+height: 63px;
+margin: 50px auto 0px;
 }
 
-#sidebar .sidebar-box a.title:hover {
-text-decoration: none;
-color: #fff;
-}
 
 #sidebar .sidebar-box h3 {
 font-size:18px;
