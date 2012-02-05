@@ -27,7 +27,7 @@ $(function(){
    });
 
    // change search arrow when input entered
-   $("#side-search").keydown(function(){
+   $("#side-search").keyup(function(){
       if ($(this).val().trim() == "") {
         $(".sidebar-search button").css("background-image", "url(../images/arrow-curve-gray.png)");
       } else {
