@@ -1,5 +1,5 @@
 ---
-title: Javascript Countdown Timer
+title: Javascript countdown timer
 tags:
   - javascript
   - quickie
