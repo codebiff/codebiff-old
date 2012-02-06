@@ -1,5 +1,5 @@
 ---
-title: Roll Your Own Sinatra Authentication
+title: Roll your own Sinatra authentication
 tags:
   - sinatra
   - authentication

@@ -1,5 +1,5 @@
 ---
-title: Paginate an Array with Ruby
+title: Paginate an array with Ruby
 tags: 
   - ruby
   - quickie

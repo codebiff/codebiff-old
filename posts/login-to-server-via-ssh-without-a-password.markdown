@@ -1,5 +1,5 @@
 ---
-title: Login to Server via SSH without a Password
+title: Login to server via SSH without a password
 tags:
   - vps
   - quickie
