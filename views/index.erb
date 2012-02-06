@@ -7,11 +7,11 @@
 <div class="pagination">
     <p>
     <% if @page.to_i != 1 %>
-      <a class="pagination-newer" href="<%= "#{request.path}?page=#{@page.to_i - 1}" %>">&lsaquo; newer</a>
+      <a class="pagination-newer" href="<%= "#{request.path}?page=#{@page.to_i - 1}" %>">&lsaquo; newer posts</a>
     <% end %>
     
     <% if @page.to_i != POST_PAGES %>
-      <a class="pagination-older" href="<%= "#{request.path}?page=#{@page.to_i + 1}" %>">older &rsaquo;</a>
+      <a class="pagination-older" href="<%= "#{request.path}?page=#{@page.to_i + 1}" %>">older posts &rsaquo;</a>
     <% end %>
   </p>
 </div>
