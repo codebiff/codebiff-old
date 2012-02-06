@@ -45,9 +45,7 @@ Now we have the keys we need to copy over the public key (id_rsa.pub) over to th
 
 Now our local machine and server have a matching key pair there is no need to enter a password when logging in.
 
-_UPDATE - Agent admitted failure to sign using the key_
-
-If you are getting this error try running `$ ssh-add ~/.ssh/id_rsa` as this can resolve this problem.
+If you get the error `Agent admitted failure to sign using the key` try running `$ ssh-add ~/.ssh/id_rsa` as this can resolve this problem.
 
 ### Added Bonus - SSH config file
 
