@@ -67,7 +67,7 @@
           <h3>tags</h3>
           <ul class="tags">
             <% for tag in @tags %>
-              <li><a href="/tags/<%= tag %>"><%= tag %></a></li>
+              <li><a href="/tags/<%= tag[0] %>" title="<%= pluralize(tag[1], "post") %>"><%= tag[0] %></a></li>
             <% end %>
           </ul>
         </section> <!-- /sidebar-box -->
@@ -96,6 +96,10 @@
           <a href="http://vps.net"><img src="/images/hosting-by-vps.png" alt="Hosting by VPS.net" /></a>
         </section>
 
+        <section class="sidebar-box">
+          <p style="text-align: center;">&copy; Dave Nicholson</p>
+        </section>
+
 
 
       </section>
@@ -116,7 +120,7 @@
           <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a>
         </section>
 
-        <section class="footer-block">
+        <section class="footer-block-right">
         </section>
 
       </footer>

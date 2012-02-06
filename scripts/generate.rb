@@ -24,4 +24,4 @@ file_name = post_title.slug
 
 File.open("posts/#{file_name}.markdown", "w") { |f| f << contents }
 puts "Sucessfully generated posts template... now write that sucka!"
-system "gedit posts/#{file_name}.markdown"
+system "subl posts/#{file_name}.markdown &"

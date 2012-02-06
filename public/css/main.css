@@ -407,6 +407,10 @@ float:left;
 margin:10px;
 }
 
+.footer-block-right {
+	text-align: right;
+}
+
 #mainColumn > header,#sidebar .sidebar-box {
 margin-bottom:30px;
 }

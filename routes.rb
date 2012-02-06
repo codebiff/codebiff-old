@@ -60,12 +60,6 @@ post "/pull" do
   system "git pull && touch tmp/restart.txt"
 end
 
-# Hooks and helpers
-before do 
-  @title = "Home"
-  @tags = Post.all.map { |p| p.tags }.flatten.uniq.sort { |a,b| a <=> b }
-end
-
 not_found do 
   erb :'404'
 end

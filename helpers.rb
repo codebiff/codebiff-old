@@ -1,3 +1,9 @@
+# Hooks and helpers
+before do 
+  @title = "Home"
+  @tags = Post.all.map { |p| p.tags }.flatten.sort { |a,b| a <=> b }.inject(Hash.new(0)) {|h,x| h[x]+=1;h}.to_a 
+end
+
 helpers do 
   include Rack::Utils
   alias_method :h, :escape_html
