@@ -142,14 +142,13 @@ background:url('../images/clock-small.png') no-repeat 0 0;
 padding:2px 20px 0 17px;
 }
 
-ul.tags {
-display:inline;
+ul.tags, ul.tags li {
+display: inline-block;
 }
 
-ul.tags li {
-display:inline;
+ul.tags li a {
 background:url('../images/tag-small.png') no-repeat 0 4px;
-padding:4px 2px 0 15px;
+padding:4px 2px 0 15px;	
 }
 
 .post p.read-more {
