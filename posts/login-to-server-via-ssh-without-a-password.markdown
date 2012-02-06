@@ -1,0 +1,60 @@
+---
+title: Login to Server via SSH without a Password
+tags:
+  - vps
+  - quickie
+  - cli
+date: 2012-02-06 21:20:00
+---
+
+If you're anything like me then logging into your server via a terminal is a daily occurance. And it's common tasks like this that are perfect for a bit of automation. By following these quick instructions you will be able to login to your remote server with just two words in your terminal, and no need for a password to be entered in the process. Lovely stuff.
+
+First we need to create authentication keys, so fire up your terminal.
+
+	~~bash
+	$ ssh-keygen -t rsa
+
+This will begin the process of creating a new key pair. The following will be displayed in the terminal. Accept the default options, do not enter a passphrase.
+
+	~~bash
+	Generating public/private rsa key pair.
+	Enter file in which to save the key (/home/username/.ssh/id_rsa): 
+	Enter passphrase (empty for no passphrase): 
+	Enter same passphrase again: 
+	Your identification has been saved in /home/username/.ssh/id_rsa.
+	Your public key has been saved in /home/username/.ssh/id_rsa.pub.
+	The key fingerprint is:
+	0b:78:e3:da:4d:23:0b:bf:de:b2:01:e0:7c:13:38:fa username@local-name
+	The key's randomart image is:
+	+--[ RSA 2048]----+
+	|                 |
+	|   .             |
+	|  + .            |
+	| + o o           |
+	|. o = + S        |
+	| . . = o .       |
+	|  E . + +        |
+	|     =.B .       |
+	|    ..B+o        |
+	+-----------------+
+
+Now we have the keys we need to copy over the public key (id_rsa.pub) over to the server. Before you carry out this step ensure you `home` directory on the server has a `.ssh` directory. If not create it.
+
+	~~bash
+	$ cat .ssh/id_rsa.pub | ssh username@server-name 'cat >> .ssh/authorized_keys'
+
+Now our local machine and server have a matching key pair there is no need to enter a password when logging in.
+
+### Added Bonus - SSH config file
+
+As well as not needing to enter a password we can even shorten the command needed to connect. Inside you local `.ssh` folder create (if it's not already there) a file named `config` and insert the following.
+
+	~~bash
+	Host servername
+	  HostName servername.com
+	  User username
+	  Port 22
+
+Now to login all we need to enter is `$ ssh servername` and we're logged in.
+
+
