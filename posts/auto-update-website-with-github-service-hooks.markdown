@@ -3,6 +3,7 @@ title: Auto update a website with GitHub service hooks
 tags:
   - git
   - github
+  - ssh
 date: 2012-01-14
 ---
 

@@ -4,6 +4,7 @@ tags:
   - vps
   - quickie
   - cli
+  - ssh
 date: 2012-02-06 21:20:00
 ---
 
