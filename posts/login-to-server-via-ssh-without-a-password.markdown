@@ -42,7 +42,7 @@ This will begin the process of creating a new key pair. The following will be di
 Now we have the keys we need to copy over the public key (id_rsa.pub) over to the server. Before you carry out this step ensure you `home` directory on the server has a `.ssh` directory. If not create it.
 
 	~~bash
-	$ cat .ssh/id_rsa.pub | ssh username@server-name 'cat >> .ssh/authorized_keys'
+	$ cat .ssh/id_rsa.pub | ssh username@servername 'cat >> .ssh/authorized_keys'
 
 Now our local machine and server have a matching key pair there is no need to enter a password when logging in.
 
