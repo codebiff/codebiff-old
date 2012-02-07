@@ -8,7 +8,7 @@
         <title><%= h post.title %></title>
         <link>http://codebiff.com/<%= post.name %></link>
         <pubDate><%= Time.parse(post.date.to_s).rfc822 %></pubDate>
-        <description><%= h  post.to_html %></description>
+        <description><%= h post.to_html.gsub!(/~~\w+/, "") %></description>
       </item>
     <% end %>
   </channel>

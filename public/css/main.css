@@ -266,6 +266,9 @@ padding: 0 20px 0 0;
 font-style: italic;
 }
 
+ul#archive li span {
+}
+
 #sidebar .sidebar-box {
 position: relative;	
 }
@@ -436,6 +439,6 @@ text-align: right;
 margin-bottom:30px;
 }
 
-.pagination ul,.center {
+.pagination ul.center {
 text-align:center;
 }
