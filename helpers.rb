@@ -25,6 +25,12 @@ helpers do
   def geek_date(date)
     date.strftime("%Y-%m-%dT%H:%M:%S%z") 
   end
+    
+  # short time dd/mm/yy
+  def short_date(date)
+    date.strftime("%d/%m/%Y") 
+  end
+
 
   # Pluralize any word (2, post) (5, dice, die)
   def pluralize(n, singular, plural=nil)

@@ -34,6 +34,7 @@ get "/tags/:tag" do
 end
 
 get "/contact" do
+  @title = "Contact Me"
   erb :contact
 end
 

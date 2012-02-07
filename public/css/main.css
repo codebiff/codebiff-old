@@ -157,10 +157,6 @@ padding-right:20px;
 font-style:italic;
 }
 
-.post .postContent p {
-margin-bottom:20px;
-}
-
 .post .postContent img {
 display:block;
 border:8px solid rgba(0,0,0,0.1);
@@ -220,6 +216,10 @@ font-size:18px;
 padding: 0 0 20px 0
 }
 
+p {
+padding-bottom: 20px;
+}
+
 #mainColumn .post h3 {
 padding: 20px 0 15px 0;
 }
@@ -260,18 +260,10 @@ top: 99px;
 right: -40px;
 }
 
-p.archive-entry {
-line-height:20px;
-}
-
-p.archive-entry time {
-display:inline-block;
-width:140px;
-text-align:right;
-padding-right:10px;
-font-size:12px;
-font-style:italic;
-color:#888;
+ul#archive li time {
+display: inline-block;
+padding: 0 20px 0 0;
+font-style: italic;
 }
 
 #sidebar .sidebar-box {
@@ -302,12 +294,13 @@ margin-bottom:10px;
 padding-right:3px;
 }
 
-#sidebar .sidebar-search form {
+form {
 position: relative;
 }
 
-#sidebar .sidebar-search input, 
-#sidebar .sidebar-search button
+input, 
+button,
+textarea
 {
 background: #333;
 background: rgba(0,0,0,0.2);
@@ -317,23 +310,49 @@ color: rgba(255,255,255,0.6);
 padding: 0;
 margin: 0;
 height: 24px;
-display: block;
+border-radius: 4px
 }
 
 #sidebar .sidebar-search input {
 width: 164px;
-border-top-left-radius: 4px;
-border-bottom-left-radius: 4px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
 padding-left: 6px;
 }
 
-input:focus {
+input:focus,
+textarea:focus
+{
 outline: none;
 }
 
+ul#contact {
+width: 400px;
+margin: 20px auto;
+}
+
+ul#contact li {
+position: relative;
+padding-bottom: 6px
+}
+
+ul#contact li a:hover {
+text-decoration: none;
+}
+
+ul#contact li a:hover span {
+text-decoration: underline;
+}
+
+ul#contact li a span {
+position: relative;
+top: -6px;
+font: normal 30px/30px "Open Sans Condensed", Verdana, Arial, sans-serif;
+padding-left: 10px;
+}
+
+
 #sidebar .sidebar-search button {
-border-top-right-radius: 4px;
-border-bottom-right-radius: 4px;
 width: 30px;
 position: absolute;
 right: 0;
@@ -355,13 +374,13 @@ height: 42px;
 margin: 0 auto;
 }
 
-#twitter {
+#twitter{
 font-style:italic;
-font-size:10px;
+font-size: 10px;
 }
 
 .follow-me-twitter {
-margin-top:8px;
+margin-top: -12px;
 font-size:9px;
 }
 
