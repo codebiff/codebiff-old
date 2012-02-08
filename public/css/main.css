@@ -261,7 +261,8 @@ right: -40px;
 }
 
 #archive-list h3 {
-padding-bottom: 7px
+padding-bottom: 8px;
+font-weight: 300;
 }
 
 #archive-list ul {
@@ -290,6 +291,8 @@ color: #fff;
 font-size:18px;
 font-weight:400;
 margin-bottom:10px;
+border-bottom: 1px dotted #aaa;
+padding: 0 0 6px 0;
 }
 
 #sidebar .sidebar-box .social-link {
