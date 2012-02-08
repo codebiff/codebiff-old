@@ -325,6 +325,11 @@ border-bottom-right-radius: 0px;
 padding-left: 6px;
 }
 
+#sidebar .sidebar-search button {
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+} 
+
 input:focus,
 textarea:focus
 {
