@@ -3,6 +3,7 @@ require "jadof"
 require "yaml"
 require "./lib/array"
 require "./lib/fixnum"
+require "./lib/string"
 require "rack/google-analytics"
 
 require "./helpers"

@@ -41,8 +41,7 @@ end
 get "/search" do
   term = params[:q] || ""
   @title = "Search results for '#{term}'"
-  # TODO: Make this search better... it's really stupid at the minute.
-  @posts = Post.all.select{|p| p.to_html.downcase.include? term.downcase}.sort{|a,b| a.date <=> b.date}.reverse
+  @posts = Post.all.select{|p| p.to_html.downcase.include_many?(term.downcase.split)}.sort{|a,b| a.date <=> b.date}.reverse
   erb :search
 end
 
