@@ -79,7 +79,7 @@ h2 {
 font-size:22px;
 }
 
-h3 {
+h1, h2, h3 {
 font-family:"Open Sans Condensed";
 }
 
@@ -260,13 +260,12 @@ top: 99px;
 right: -40px;
 }
 
-ul#archive li time {
-display: inline-block;
-padding: 0 20px 0 0;
-font-style: italic;
+#archive-list h3 {
+padding-bottom: 7px
 }
 
-ul#archive li span {
+#archive-list ul {
+padding: 0 0 20px 30px
 }
 
 #sidebar .sidebar-box {

@@ -1,14 +1,19 @@
-<h3>Archive</h3>
+<h1>Archive</h1>
 
-<ul id="archive">
-<% for post in @posts %>
-   <li>
-   <time datetime="<%= geek_date(post.date) %>">
-      <%= short_date(post.date) %>
-   </time>
-   <span>
-    <a href="/<%= post.name %>"><%= post.title %></a>
-  	</span>
-  </li>
+<section id="archive-list">
+
+<% @archive.each do |month, posts| %>
+
+	<h3><%= month %></h3>
+
+	<ul>
+	<% for post in posts %>
+	   <li>
+	    <a href="/<%= post.name %>"><%= post.title %></a>
+	  </li>
+	<% end %>
+	</ul>
+
 <% end %>
-</ul>
+
+</section>

@@ -17,7 +17,7 @@ get "/" do
 end
 
 get "/archive" do
-  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.to_a
+  @archive = Post.all.sort{|a,b| a.date <=> b.date}.reverse.group_by{|p| p.date.strftime("%B %Y")}
   erb :archive
 end
 
