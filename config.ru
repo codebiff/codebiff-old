@@ -2,15 +2,17 @@ require "sinatra"
 require "jadof"
 require "yaml"
 
-
+# Custom object methods
 require "./lib/array"
 require "./lib/fixnum"
 require "./lib/string"
 
+# Google Analytics
 require "rack/google-analytics"
+use Rack::GoogleAnalytics, :tracker => "UA-28186072-1"
 
+# The App
+require "./settings"
 require "./helpers"
 require "./routes"
-
-use Rack::GoogleAnalytics, :tracker => "UA-28186072-1"
 run Sinatra::Application

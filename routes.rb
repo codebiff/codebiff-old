@@ -1,11 +1,5 @@
 include JADOF
 
-# Constants
-BLOG_TITLE       = "CodeBiff"
-BLOG_DESCRIPTION = "Broadcasting from the arse end of the web"
-DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0 # Set disqus to development mode on localhost
-PER_PAGE         = 10 # How many posts per paginated page
-
 # Config
 Post.formatters['redcarpet'] = lambda do |text|
   require "redcarpet"
@@ -15,11 +9,11 @@ Post.formatters['redcarpet'] = lambda do |text|
 end
 
 Post.dir         = "posts"
-POST_PAGES       = Post.all.pages(PER_PAGE)
+POST_PAGES       = Post.all.pages(settings.per_page)
 
 # Routes
 get "/" do
-  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.to_a.paginate(get_page,PER_PAGE)
+  @posts = Post.all.sort{|a,b| a.date <=> b.date}.reverse.to_a.paginate(get_page,settings.per_page)
   erb :index
 end
 
