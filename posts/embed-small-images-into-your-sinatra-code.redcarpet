@@ -16,9 +16,10 @@ As usual, [Wikipedia](http://en.wikipedia.org/wiki/Base64) puts it best. (Or was
 
 Well that's the theory. Let's get our hands dirty.There's plenty of websites out there that can encode our images into Base64 strings for us but I like to roll my own with a simple ruby two-liner.
 
-    ~~ruby
-  	require "base64"
-  	File.open("image.png", "r") { |f| puts Base64::encode64 f.read }
+```ruby
+require "base64"
+File.open("image.png", "r") { |f| puts Base64::encode64 f.read }
+```
 
 Replacing _image.png_ with whatever image we want spits out a large chunk of text. **Warning** Don't try this on an image too large or the string it spits out will be _huge_. For example a small 24x24 colour icon spits out the following...
 
@@ -51,40 +52,41 @@ Amazing! Great! Thank's for that! Now you see why I said don't use an image too 
 
 After encoding we can use Sinatra to decode these strings when called for in the page and return them as the image.
 
-    ~~ruby
-  	# all-in-one.rb
-  
-  	require "sinatra"
-  	require "base64"
-  	
-  	get "/" do
-  	  erb :index
-  	end
-  
-  	get "/images/:img" do
-  	
-  	  case params[:img]
-  	  when "apple.png"
-  	    Base64::decode64("/9j/4AAQSkZJRgABAQEAYABgAAD...")
-  	  when "windows.png"
-  	    Base64::decode64("iVBORw0KGgoAAAANSUhEUgAAABg...")
-  	  end
-  	
-  	end
-  
-  	__END__
-  
-  	@@index
-  	<!DOCTYPE html>
-  	<html>
-  	  <head>
-  	    <title>Base64 Image Example</title>
-  	  </head>
-  	
-  	  <body>
-  	    <img src="/images/apple.png" alt="apple" />
-  	    <img src="/images/windows.png" alt="windows" />
-  	  </body>
-  	</html>
+```ruby
+# all-in-one.rb
+
+require "sinatra"
+require "base64"
+
+get "/" do
+  erb :index
+end
+
+get "/images/:img" do
+
+  case params[:img]
+  when "apple.png"
+    Base64::decode64("/9j/4AAQSkZJRgABAQEAYABgAAD...")
+  when "windows.png"
+    Base64::decode64("iVBORw0KGgoAAAANSUhEUgAAABg...")
+  end
+
+end
+
+__END__
+
+@@index
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Base64 Image Example</title>
+  </head>
+
+  <body>
+    <img src="/images/apple.png" alt="apple" />
+    <img src="/images/windows.png" alt="windows" />
+  </body>
+</html>
+```ruby
 
 Run `ruby all-in-one.rb` and goto `0.0.0.0:4567` and you should see the two images. Now you know you'll tell that certain someone to poke off!

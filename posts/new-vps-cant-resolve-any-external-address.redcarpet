@@ -10,8 +10,9 @@ If you've just set up a new VPS and are having problems resolving any external a
 
 Edit _/etc/resolv.conf_ with your favourite editor and add:
     
-    ~~bash
-    nameserver 8.8.8.8
-    nameserver 8.8.4.4
+```bash
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+```
 
 You should now have access to the big wide world! 

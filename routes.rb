@@ -7,6 +7,12 @@ DISQUS_DEV       = ENV['DEVELOPMENT'] ? 1 : 0 # Set disqus to development mode o
 PER_PAGE         = 10 # How many posts per paginated page
 
 # Config
+Post.formatters['redcarpet'] = lambda do |text|
+  require "redcarpet/compat"
+  options = [:hard_wrap, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
+  Markdown.new(text, *options).to_html
+end
+
 Post.dir         = "posts"
 POST_PAGES       = Post.all.pages(PER_PAGE)
 

@@ -185,6 +185,16 @@ font-family:mono, monospace;
 font-size:12px;
 }
 
+.postContent .update {
+text-align: center;   
+}
+
+.postContent .update span {
+font-weight: 700;
+background: url('../images/exclamation.png') left center no-repeat;
+padding-left: 20px   
+}
+
 .postContent p code {
 background:#3f3f3f;
 color:#fff;
