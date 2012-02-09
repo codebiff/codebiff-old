@@ -16,10 +16,10 @@ As usual, [Wikipedia](http://en.wikipedia.org/wiki/Base64) puts it best. (Or was
 
 Well that's the theory. Let's get our hands dirty.There's plenty of websites out there that can encode our images into Base64 strings for us but I like to roll my own with a simple ruby two-liner.
 
-```ruby
+~~~ruby
 require "base64"
 File.open("image.png", "r") { |f| puts Base64::encode64 f.read }
-```
+~~~
 
 Replacing _image.png_ with whatever image we want spits out a large chunk of text. **Warning** Don't try this on an image too large or the string it spits out will be _huge_. For example a small 24x24 colour icon spits out the following...
 
@@ -52,7 +52,7 @@ Amazing! Great! Thank's for that! Now you see why I said don't use an image too 
 
 After encoding we can use Sinatra to decode these strings when called for in the page and return them as the image.
 
-```ruby
+~~~ruby
 # all-in-one.rb
 
 require "sinatra"
@@ -87,6 +87,6 @@ __END__
     <img src="/images/windows.png" alt="windows" />
   </body>
 </html>
-```ruby
+~~~ruby
 
 Run `ruby all-in-one.rb` and goto `0.0.0.0:4567` and you should see the two images. Now you know you'll tell that certain someone to poke off!

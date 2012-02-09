@@ -15,7 +15,7 @@ This tutorial assumes you have an understanding of [Sinatra](http://sinatrarb.co
 
 Let's start at the beginning. We need to register a user. So let's make a form.
 
-```xml
+~~~xml
 # views/signup.erb
 
 <form action="/signup" method="post">
@@ -38,11 +38,11 @@ Let's start at the beginning. We need to register a user. So let's make a form.
   <input type="submit" value="Register"/>
 
 </form>
-```
+~~~
 
 We're going to need a database model for our users, so lets define one now.
 
-```ruby
+~~~ruby
 require "bcrypt"
 require "securerandom"
 
@@ -62,7 +62,7 @@ class User
   validates_length_of           :password, :min => 6
 
 end
-```
+~~~
 
 We'll be using our email as the username, so that's saved here. We don't want to save the password as plain text. That's just stupid! So we're going top encrypt the password with a (a string added to the password to mix things up and make it harder to guess). So we'll need to save the encrypted password and the salt we encrypted with it. We've also got a token (needed later). 
 
@@ -70,7 +70,7 @@ There are also come accessors and validations to ensure that when the registrati
 
 And finally some routes.
 
-```ruby
+~~~ruby
 get "/signup" do
   erb :signup
 end
@@ -86,7 +86,7 @@ post "/signup" do
     redirect "/signup?email=#{params[:user][:email]}"
   end
 end
-```
+~~~
 
 When we submit the form we create a new user with the form's input. The password salt is created with the [bcrypt](https://github.com/codahale/bcrypt-ruby) gem, so make sure you install and require it. Once we've generated a completely random salt we can use it to encrypt the users password with the same library.
 
@@ -96,11 +96,11 @@ However, if everything is OK then the user 'token' is saved to a session variabl
 
 Add the following to your user model.
 
-```ruby
+~~~ruby
 after :create do
     self.token = SecureRandom.hex
 end
-```
+~~~
 
 Now each user will have a completely random token we can use to identify them, as well as their database ID. We now have a registered user! Hurray!
 
@@ -108,7 +108,7 @@ Now each user will have a completely random token we can use to identify them, a
 
 So now we can register. Now let's log in. This requires us to compare our submitted password with the password hash stored in the database. As we have the same salt we used to encrypt the password in our database we can re encrypt the submitted password with the original hash and compare it with the stored password hash.
 
-```xml
+~~~xml
 # views/login.erb
 
 <h3>Login</h3>
@@ -128,11 +128,11 @@ So now we can register. Now let's log in. This requires us to compare our submit
   <input type="submit" value="Login" />
 
 </form>
-```
+~~~
 
 All pretty straight forward. Now to route.
 
-```ruby
+~~~ruby
 get "/login" do
   erb :login
 end
@@ -149,20 +149,20 @@ post "/login" do
     redirect "/login?email=#{params[:email]}"
   end
 end
-```
+~~~
 
 And a simple logout route to clear the logged in user form the session and redirect to the homepage.
 
-```ruby
+~~~ruby
 get "/logout" do
   session[:user] = nil
   redirect "/"
 end
-```
+~~~
 
 Now we're logged in let's create a simple test. First a homepage to display the current user. We're going to need to create a `current_user` helper method to grab the logged in users database record. If no user is logged in (current_user returns returns nil) we'll display links to either login or register.
 
-```xml
+~~~xml
 # views/index.erb
 
 <% if current_user %>
@@ -170,11 +170,11 @@ Now we're logged in let's create a simple test. First a homepage to display the 
 <% else %>
   <p><a href="/login">login</a> | <a href="/signup">register</a></p>
 <% end %>
-```
+~~~
 
 The `current_user` method either grabs the user details from the database if it's the first time it is called, otherwise it will return the already created variable.
 
-```ruby
+~~~ruby
 helpers do    
    
     def current_user
@@ -182,6 +182,6 @@ helpers do
     end
 
 end
-```
+~~~
 
 TADA! Well, that's the basics. There's also lots more that can be included (remember me, email confirmation etc.) but I'll leave that to you. I'm always updating and building on [my authentication framework on github](https://github.com/codebiff/sinatra-authentication) so check it out there for some ideas.

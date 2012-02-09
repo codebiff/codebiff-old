@@ -17,7 +17,7 @@ So here's a small snippet of jQuery to fix that. It looks for `<pre><code>` tags
 
 As you can see it's a little bit more complicated than that. I was having trouble removing the current class then adding a new class to the tags, so I had to use the messy task of duplicating the code below the element and then deleting the original. Like I said, messy, but it works. 
 
-```javascript
+~~~javascript
 $("pre > code").each(function(){
   var lang = $(this).text().match(/~~(\w+)/);
   if (lang) {
@@ -26,4 +26,4 @@ $("pre > code").each(function(){
     $(this).parent().after(new_pre).remove();
   }
 });
-```
+~~~

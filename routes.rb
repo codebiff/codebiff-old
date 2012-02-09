@@ -8,9 +8,10 @@ PER_PAGE         = 10 # How many posts per paginated page
 
 # Config
 Post.formatters['redcarpet'] = lambda do |text|
-  require "redcarpet/compat"
-  options = [:hard_wrap, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
-  Markdown.new(text, *options).to_html
+  require "redcarpet"
+  options = {:autolink => true, :no_intra_emphasis => true, :fenced_code_blocks => true, :strikethrough => true, :superscript => true}
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+  markdown.render(text)
 end
 
 Post.dir         = "posts"
