@@ -22,6 +22,6 @@ contents << "---\n\n"
 
 file_name = post_title.slug
 
-File.open("posts/#{file_name}.markdown", "w") { |f| f << contents }
+File.open("posts/#{file_name}.redcarpet", "w") { |f| f << contents }
 puts "Sucessfully generated posts template... now write that sucka!"
-system "subl posts/#{file_name}.markdown &"
+system "subl posts/#{file_name}.redcarpet &"
