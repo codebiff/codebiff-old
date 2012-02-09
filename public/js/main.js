@@ -13,9 +13,6 @@ $(function(){
     $("#twitter").html($.linkify(text));
   });
 
-  // Fuzzy Time
-  $("time.published").timeago();
-
   // Fix highlighting
   $("pre > code").each(function(){
     var lang = $(this).text().match(/~~(\w+)/);
