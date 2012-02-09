@@ -1,5 +1,7 @@
 # Hooks and helpers
 before do 
+  cache_control :public, :must_revalidate, :max_age => 60
+  
   @title = "Home"
   @tags = Post.all.map { |p| p.tags }.flatten.sort { |a,b| a <=> b }.inject(Hash.new(0)) {|h,x| h[x]+=1;h}.to_a 
 end
