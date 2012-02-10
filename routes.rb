@@ -1,10 +1,18 @@
 include JADOF
 
-# Config
+# custom markdown/redcarpet/albino formatter
 Post.formatters['redcarpet'] = lambda do |text|
   require "redcarpet"
+  require "albino"
+
+  class AlbinoHTML < Redcarpet::Render::HTML
+    def block_code(code,language)
+      Albino.colorize(code,language)
+    end
+  end
+
   options = {:autolink => true, :no_intra_emphasis => true, :fenced_code_blocks => true, :strikethrough => true, :superscript => true}
-  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+  markdown = Redcarpet::Markdown.new(AlbinoHTML, options)
   markdown.render(text)
 end
 
