@@ -20,7 +20,7 @@ virtual_alias_maps      = hash:/etc/postfix/virtual
 
 The first line tells Postfix which domains it will allow. Without this any mail sent to the domain will be rejected. The second line tells Postfix where to find the virtual addresses we wish to use. We'll make this file now.
 
-Create `/etc/postfix/virtual` and add the following (obviously changing the values to maych your needs).
+Create `/etc/postfix/virtual` and add the following (obviously changing the values to match your needs).
 
 ~~~bash
 # /etc/postfix/virtual
