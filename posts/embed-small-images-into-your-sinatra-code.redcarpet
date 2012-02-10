@@ -87,6 +87,6 @@ __END__
     <img src="/images/windows.png" alt="windows" />
   </body>
 </html>
-~~~ruby
+~~~
 
 Run `ruby all-in-one.rb` and goto `0.0.0.0:4567` and you should see the two images. Now you know you'll tell that certain someone to poke off!
