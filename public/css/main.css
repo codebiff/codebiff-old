@@ -41,6 +41,12 @@ border-collapse:collapse;
 border-spacing:0;
 }
 
+/* MINE */
+
+* { 
+box-sizing: border-box }
+}
+
 html {
 height:100%;
 }
@@ -329,7 +335,7 @@ border-radius: 4px
 }
 
 #sidebar .sidebar-search input {
-width: 164px;
+width: 170px;
 border-top-right-radius: 0px;
 border-bottom-right-radius: 0px;
 padding-left: 6px;
