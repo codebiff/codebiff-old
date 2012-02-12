@@ -1,7 +1,5 @@
 # Hooks and helpers
-before do 
-  cache_control :public, :must_revalidate, :max_age => 60
-  
+before do  
   @title = "Home"
   @tags = Post.all.map { |p| p.tags }.flatten.sort { |a,b| a <=> b }.inject(Hash.new(0)) {|h,x| h[x]+=1;h}.to_a 
 end
@@ -53,6 +51,11 @@ helpers do
   # Check if js file exists with name
   def js_exists? name
     FileTest.exist? "public/js/#{name}.js"
+  end
+
+  # Check if js file exists with name
+  def css_exists? name
+    FileTest.exist? "public/js/#{name}.css"
   end
 
   # DateTime to words
