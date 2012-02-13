@@ -16,8 +16,8 @@ Post.formatters['redcarpet'] = lambda do |text|
   markdown.render(text)
 end
 
-Post.dir         = "posts"
-POST_PAGES       = Post.all.pages(settings.per_page)
+Post.dir    = "posts"
+POST_PAGES  = Post.all.pages(settings.per_page)
 
 # Routes
 get "/" do
