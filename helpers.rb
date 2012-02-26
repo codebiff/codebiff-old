@@ -23,7 +23,7 @@ helpers do
 
   # format time for html time tag
   def geek_date(date)
-    date.strftime("%Y-%m-%dT%H:%M:%S%z") 
+    date.strftime("%Y-%m-%d") 
   end
     
   # short time dd/mm/yy
