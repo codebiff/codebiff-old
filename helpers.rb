@@ -53,7 +53,7 @@ helpers do
     FileTest.exist? "public/js/#{name}.js"
   end
 
-  # Check if js file exists with name
+  # Check if css file exists with name
   def css_exists? name
     FileTest.exist? "public/js/#{name}.css"
   end
