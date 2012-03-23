@@ -1,0 +1,73 @@
+---
+title: OmniAuth with Sinatra
+tags:
+  - sinatra
+  - omniauth
+  - tutorial
+date: 2012-03-22
+---
+
+Back in [Episode #241 - Simple OmniAuth](http://railscasts.com/episodes/241-simple-omniauth) of Railscasts, Ryan Bates showed how to easily use [OmniAuth](https://github.com/intridea/omniauth) as an option for logging into your web apps. As I'm not a massive Rails user and prefer to use Sinatra for my small/medium sized applications I ported his code to Sinatra and used DataMapper instead of Active Record.
+
+~~~ruby
+require 'sinatra'
+require 'omniauth'
+require "omniauth-twitter"
+require "dm-core"
+require "dm-migrations"
+
+enable :sessions
+use OmniAuth::Builder do
+  provider :twitter, CONSUMER_KEY, CONSUMER_SECRET
+end
+
+DataMapper.setup(:default, "sqlite3::memory:")
+
+class User
+  include DataMapper::Resource
+
+  property :id,           Serial
+  property :provider,     String
+  property :uid,          String
+  property :nickname,     String
+
+  def self.create_with_omniauth(auth)
+    create(:provider => auth['provider'], uid => auth['uid'], :nickname => auth['info']['nickname'])
+  end
+
+end
+
+DataMapper.finalize.auto_upgrade!
+
+get "/" do
+  erb :index
+end
+
+get "/auth/:provider/callback" do
+  auth = request.env['omniauth.auth']
+  user = User.first(:provider => auth['provider'], :uid => auth['uid']) || User.create_with_omniauth(auth)
+  session['user_id'] = user.id
+  redirect "/"
+end
+
+get "/logout" do
+  session['user_id'] = nil
+  redirect "/"
+end
+
+helpers do
+  
+  def current_user
+    @current_user ||= User.get(session['user_id']) if session['user_id']
+  end
+
+end
+
+__END__
+@@index
+<% if current_user %>
+  <p>Welcome <%= current_user.nickname %></p>
+<% else %>
+  <a href="/auth/twitter">login with twitter</a>
+<% end %>
+~~~
