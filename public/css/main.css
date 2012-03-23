@@ -56,7 +56,10 @@ height:100%;
 a {
 color:#4995D3;
 text-decoration:none;
+outline: none;
 }
+
+:-moz-any-link:focus { outline: none; }
 
 button:hover {
 cursor: pointer;
