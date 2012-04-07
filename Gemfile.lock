@@ -1,0 +1,29 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    albino (1.3.3)
+      posix-spawn (>= 0.3.6)
+    indifferent-variable-hash (0.1.0)
+    jadof (0.1.6)
+      indifferent-variable-hash (>= 0.1.0)
+    posix-spawn (0.3.6)
+    rack (1.4.1)
+    rack-google-analytics (0.10.0)
+    rack-protection (1.2.0)
+      rack
+    redcarpet (2.1.1)
+    sinatra (1.3.2)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    tilt (1.3.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  albino
+  jadof
+  rack-google-analytics
+  redcarpet
+  sinatra
