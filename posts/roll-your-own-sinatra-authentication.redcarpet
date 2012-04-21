@@ -64,7 +64,7 @@ class User
 end
 ~~~
 
-We'll be using our email as the username, so that's saved here. We don't want to save the password as plain text. That's just stupid! So we're going top encrypt the password with a (a string added to the password to mix things up and make it harder to guess). So we'll need to save the encrypted password and the salt we encrypted with it. We've also got a token (needed later). 
+We'll be using our email as the username, so that's saved here. We don't want to save the password as plain text. That's just stupid! So we're going top encrypt the password with a salt (a string added to the password to mix things up and make it harder to guess). So we'll need to save the encrypted password and the salt we encrypted with it. We've also got a token (needed later). 
 
 There are also come accessors and validations to ensure that when the registration form is submitted we can ensure the input is good.
 
