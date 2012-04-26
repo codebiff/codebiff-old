@@ -7,4 +7,5 @@ set :per_page, 					10
 
 set :root,              File.expand_path(File.dirname(__FILE__))
 set :public,            File.expand_path(File.dirname(__FILE__) + "/public") 
+set :cache_output_dir,  File.expand_path(File.dirname(__FILE__) + "/public/cache") 
 set :cache_enabled,     true
