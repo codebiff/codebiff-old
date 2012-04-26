@@ -8,4 +8,8 @@ set :disqus_dev, 				ENV['DEVELOPMENT'] ? 1 : 0
 
 set :per_page, 					10
 
+
+set :cache_output_dir,  File.expand_path(File.dirname(__FILE__) + "/public/cache")
+set :cache_environment, :production
 set :cache_enabled,     true
+set :cache_logging_level, :debug
