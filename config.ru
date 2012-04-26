@@ -11,8 +11,6 @@ require "./lib/string"
 require "rack/google-analytics"
 use Rack::GoogleAnalytics, :tracker => "UA-28186072-1"
 
-require "sinatra/cache"
-
 # The App
 require "./settings"
 require "./helpers"
