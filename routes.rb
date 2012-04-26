@@ -66,7 +66,7 @@ end
 
 # Pull latest commit from GitHub automatically
 post "/pull" do
-  system "git pull && touch tmp/restart.txt"
+  system "git pull && bundle && rm /public/cache/* && touch tmp/restart.txt"
 end
 
 not_found do 
