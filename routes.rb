@@ -51,7 +51,7 @@ get "/search" do
   term = params[:q] || ""
   @title = "Search results for '#{term}'"
   @posts = Post.all.select{|p| p.to_html.downcase.include_many?(term.downcase.split)}.sort{|a,b| a.date <=> b.date}.reverse
-  erb :search, :cache => false
+  erb :search
 end
 
 get "/:post" do
