@@ -11,7 +11,7 @@ Post.formatters['redcarpet'] = lambda do |text|
     end
   end
 
-  options = {:autolink => true, :no_intra_emphasis => true, :fenced_code_blocks => true, :strikethrough => true, :superscript => true}
+  options = {:autolink => true, :lax_html_block => true, :no_intra_emphasis => true, :fenced_code_blocks => true, :strikethrough => true, :superscript => true}
   markdown = Redcarpet::Markdown.new(AlbinoHTML, options)
   markdown.render(text)
 end
