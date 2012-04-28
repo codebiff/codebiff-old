@@ -8,5 +8,5 @@ set :disqus_dev, 				0
 
 set :per_page, 					50
 
-set :cache_enabled, true
+set :cache_enabled, true 
 set :cache_output_dir, File.expand_path(File.dirname(__FILE__) + "/public/cache")
